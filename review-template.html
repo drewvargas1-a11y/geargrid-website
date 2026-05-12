@@ -280,18 +280,40 @@
       .disclosure { padding: 7px 20px; }
       .wrap { padding: 0 20px; }
       .article-layout { grid-template-columns: 1fr; }
-      .sidebar { position: static; }
-      /* Move sidebar buy box above article on mobile */
-      .sidebar { order: -1; }
+      .sidebar { position: static; order: -1; }
       .verdict-grid { grid-template-columns: 1fr; gap: 12px; }
       .related-grid { grid-template-columns: 1fr 1fr; }
       .inline-cta { flex-direction: column; align-items: flex-start; }
       .footer-inner { flex-direction: column; align-items: flex-start; gap: 12px; }
+
+      /* Hero — prevent overflow */
+      .article-hero { border-radius: 4px; }
+      .article-hero img { width: 100%; max-width: 100%; object-fit: cover; }
+
+      /* Specs table — allow values to wrap, prevent clipping */
+      .specs-table { font-size: 12px; }
+      .specs-table td { padding: 10px 12px; word-break: break-word; white-space: normal; }
+      .specs-table td:first-child { width: 45%; }
+
+      /* Specs wrapper — allow horizontal scroll if needed */
+      .specs-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+      /* Comparison table — ensure horizontal scroll works */
+      .compare-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 16px -20px; padding: 0 20px; border-radius: 0; }
+      .compare-table { min-width: 480px; font-size: 12px; }
+      .compare-table th { padding: 10px 10px; font-size: 9px; }
+      .compare-table td { padding: 11px 10px; }
+
+      /* Inline CTAs */
+      .inline-cta-img { width: 80px; height: 80px; }
     }
     @media (max-width: 560px) {
-      .article-title { font-size: 28px; }
+      .article-title { font-size: 26px; }
+      .article-subtitle { font-size: 15px; }
       .related-grid { grid-template-columns: 1fr; }
-      .rating-label { width: 90px; font-size: 12px; }
+      .rating-label { width: 80px; font-size: 12px; }
+      .sidebar-price { font-size: 26px; }
+      .verdict-grid { gap: 8px; }
     }
   </style>
 </head>
@@ -504,7 +526,7 @@
         <p>Eight microphones with Sony's AI-based noise suppression algorithm make these some of the best headphones for calls on the market. In outdoor tests with wind and traffic, callers reported hearing us clearly with minimal background noise. On video calls, multiple people asked if we were using a dedicated microphone.</p>
 
         <h2 id="specs">Full Specifications</h2>
-        <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;overflow:hidden;">
+        <div class="specs-wrap" style="background:var(--surface);border:1px solid var(--border);border-radius:8px;overflow:hidden;">
           <table class="specs-table">
             <tr><td>Driver Size</td><td>30mm</td></tr>
             <tr><td>Frequency Response</td><td>4Hz – 40,000Hz (LDAC)</td></tr>
