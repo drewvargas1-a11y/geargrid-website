@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sony WH-1000XM5 Review (2025): Still the Best ANC Headphones? — GearGrid</title>
+  <meta name="description" content="Our in-depth Sony WH-1000XM5 review. We tested every feature after 60 hours of use. Here's who should buy them — and who shouldn't." />
+
+  <!-- Schema markup: tells Google this is a product review -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "name": "Sony WH-1000XM5 Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "9.8",
+      "bestRating": "10"
+    },
+    "author": { "@type": "Organization", "name": "GearGrid" },
+    "itemReviewed": {
+      "@type": "Product",
+      "name": "Sony WH-1000XM5 Wireless Noise Cancelling Headphones",
+      "brand": { "@type": "Brand", "name": "Sony" },
+      "offers": { "@type": "Offer", "price": "349", "priceCurrency": "USD" }
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+
+    :root {
+      --bg:       #0A0A0A;
+      --surface:  #111111;
+      --surface2: #181818;
+      --border:   #222222;
+      --text:     #F0F0EE;
+      --muted:    #666666;
+      --orange:   #FF5500;
+      --cyan:     #00D4FF;
+      --green:    #39D96B;
+      --red:      #FF4444;
+    }
+
+    body { background: var(--bg); font-family: 'Inter', sans-serif; color: var(--text); }
+    .cond { font-family: 'Barlow Condensed', sans-serif; }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(10,10,10,0.96); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 48px; display: flex; align-items: center;
+      justify-content: space-between; height: 68px;
+    }
+    .nav-logo {
+      font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 800;
+      letter-spacing: -0.01em; text-decoration: none; color: var(--text);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .nav-logo .logo-text span { color: var(--orange); }
+    .logo-mark { position: relative; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; flex-shrink: 0; }
+    .logo-gear { width: 40px; height: 40px; }
+    .logo-pin { position: absolute; top: 48%; left: 50%; transform: translate(-50%,-50%); width: 14px; height: 14px; filter: drop-shadow(0 0 3px rgba(0,212,255,0.6)); }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a { font-size: 13px; font-weight: 500; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px; flex-direction: column; gap: 5px; }
+    .hamburger span { display: block; width: 20px; height: 2px; background: var(--text); border-radius: 2px; }
+    .mobile-menu { display: none; position: fixed; inset: 0; background: var(--bg); z-index: 200; flex-direction: column; padding: 80px 28px 40px; gap: 4px; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: 'Barlow Condensed', sans-serif; font-size: 44px; font-weight: 700; color: var(--text); text-decoration: none; border-bottom: 1px solid var(--border); padding: 12px 0; }
+    .mobile-close { position: absolute; top: 18px; right: 20px; background: none; border: none; color: var(--muted); font-size: 28px; cursor: pointer; }
+
+    /* ── DISCLOSURE ── */
+    .disclosure { background: var(--surface); border-bottom: 1px solid var(--border); padding: 7px 48px; font-size: 11px; color: var(--muted); }
+
+    /* ── BREADCRUMB ── */
+    .breadcrumb { padding: 16px 0; font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--text); }
+    .breadcrumb span { color: #333; }
+
+    /* ── LAYOUT ── */
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
+    .article-layout {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 40px;
+      align-items: start;
+      padding-bottom: 80px;
+    }
+
+    /* ── ARTICLE HEADER ── */
+    .article-header { padding: 32px 0 28px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+    .article-cat { font-size: 10px; font-weight: 700; color: var(--cyan); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; }
+    .article-title { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(32px, 4vw, 52px); font-weight: 800; line-height: 1; letter-spacing: -0.02em; margin-bottom: 14px; }
+    .article-subtitle { font-size: 16px; color: #777; line-height: 1.65; margin-bottom: 20px; }
+    .article-meta { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; font-size: 12px; color: var(--muted); }
+    .meta-rating { display: flex; align-items: center; gap: 6px; }
+    .score-badge { background: var(--orange); color: #fff; font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 800; padding: 2px 10px; border-radius: 4px; }
+    .stars-lg { color: #FFAA00; font-size: 14px; letter-spacing: 2px; }
+
+    /* ── HERO IMAGE ── */
+    .article-hero { border-radius: 8px; overflow: hidden; margin-bottom: 32px; position: relative; }
+    .article-hero img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
+    .hero-caption { font-size: 11px; color: var(--muted); padding: 8px 0; font-style: italic; }
+
+    /* ── VERDICT BOX ── */
+    .verdict-box {
+      background: var(--surface); border: 1px solid var(--border);
+      border-left: 4px solid var(--orange); border-radius: 8px;
+      padding: 24px; margin-bottom: 32px;
+    }
+    .verdict-label { font-size: 10px; font-weight: 700; color: var(--orange); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 8px; }
+    .verdict-text { font-size: 15px; color: var(--text); line-height: 1.7; margin-bottom: 16px; }
+    .verdict-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .pro-list, .con-list { display: flex; flex-direction: column; gap: 6px; }
+    .pro-list li, .con-list li { font-size: 13px; line-height: 1.5; list-style: none; padding-left: 18px; position: relative; }
+    .pro-list li::before { content: '+'; position: absolute; left: 0; color: var(--green); font-weight: 700; }
+    .con-list li::before { content: '−'; position: absolute; left: 0; color: var(--red); font-weight: 700; }
+    .pro-list li { color: #CCC; }
+    .con-list li { color: #999; }
+    .verdict-col-label { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 10px; }
+
+    /* ── TABLE OF CONTENTS ── */
+    .toc { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 20px 24px; margin-bottom: 32px; }
+    .toc h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 12px; letter-spacing: 0.02em; }
+    .toc ol { list-style: none; counter-reset: toc; display: flex; flex-direction: column; gap: 4px; }
+    .toc ol li { counter-increment: toc; }
+    .toc ol li::before { content: counter(toc) '.'; color: var(--orange); font-weight: 700; font-size: 12px; margin-right: 8px; }
+    .toc ol li a { font-size: 13px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .toc ol li a:hover { color: var(--text); }
+
+    /* ── ARTICLE BODY ── */
+    .article-body h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 800; letter-spacing: -0.01em; margin: 36px 0 14px; padding-top: 8px; }
+    .article-body h3 { font-size: 16px; font-weight: 600; margin: 24px 0 10px; color: var(--text); }
+    .article-body p { font-size: 15px; color: #AAA; line-height: 1.85; margin-bottom: 16px; }
+    .article-body strong { color: var(--text); font-weight: 600; }
+    .article-body a { color: var(--cyan); text-decoration: none; }
+    .article-body a:hover { text-decoration: underline; }
+
+    /* ── INLINE CTA ── */
+    .inline-cta {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 8px; padding: 20px 24px; margin: 24px 0;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; flex-wrap: wrap;
+    }
+    .inline-cta-text { font-size: 14px; font-weight: 600; color: var(--text); }
+    .inline-cta-price { font-family: 'Barlow Condensed', sans-serif; font-size: 24px; font-weight: 800; color: var(--text); }
+    .inline-cta-price .was { font-size: 14px; color: var(--muted); text-decoration: line-through; font-family: 'Inter', sans-serif; font-weight: 400; margin-left: 6px; }
+    .btn-buy { display: inline-flex; align-items: center; gap: 6px; background: var(--orange); color: #fff; padding: 11px 22px; border-radius: 6px; font-size: 13px; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.15s; white-space: nowrap; }
+    .btn-buy:hover { background: #E04A00; transform: translateY(-1px); }
+
+    /* ── RATING BREAKDOWN ── */
+    .rating-breakdown { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 24px; margin: 24px 0; }
+    .rating-breakdown h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 800; margin-bottom: 20px; }
+    .rating-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+    .rating-row:last-child { margin-bottom: 0; }
+    .rating-label { font-size: 13px; color: var(--muted); width: 110px; flex-shrink: 0; }
+    .rating-bar-wrap { flex: 1; height: 6px; background: var(--surface2); border-radius: 100px; overflow: hidden; }
+    .rating-bar { height: 100%; background: var(--orange); border-radius: 100px; transition: width 1s ease; }
+    .rating-score { font-size: 13px; font-weight: 600; color: var(--text); width: 32px; text-align: right; }
+    .overall-score { display: flex; align-items: center; gap: 16px; padding-top: 20px; border-top: 1px solid var(--border); margin-top: 20px; }
+    .big-score { font-family: 'Barlow Condensed', sans-serif; font-size: 56px; font-weight: 800; color: var(--orange); line-height: 1; }
+    .score-label { font-size: 12px; color: var(--muted); }
+    .score-stars { color: #FFAA00; font-size: 18px; margin-bottom: 4px; }
+
+    /* ── SPECS TABLE ── */
+    .specs-table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 16px 0; }
+    .specs-table tr:nth-child(even) td { background: var(--surface2); }
+    .specs-table td { padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .specs-table tr:last-child td { border-bottom: none; }
+    .specs-table td:first-child { color: var(--muted); font-weight: 500; width: 40%; }
+    .specs-table td:last-child { color: var(--text); }
+
+    /* ── COMPARISON TABLE ── */
+    .compare-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 8px; margin: 16px 0; }
+    .compare-table { width: 100%; min-width: 500px; border-collapse: collapse; font-size: 13px; background: var(--surface); }
+    .compare-table th { padding: 12px 14px; font-size: 10px; font-weight: 700; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; border-bottom: 1px solid var(--border); text-align: left; }
+    .compare-table td { padding: 13px 14px; border-bottom: 1px solid var(--border); color: var(--text); }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table td.highlight { color: var(--orange); font-weight: 600; }
+    .compare-table tr.our-pick td { background: rgba(255,85,0,0.04); }
+    .compare-table tr.our-pick td:first-child { border-left: 3px solid var(--orange); }
+    .check { color: var(--green); font-weight: 700; }
+    .cross { color: var(--red); }
+
+    /* ── SIDEBAR ── */
+    .sidebar { position: sticky; top: 88px; display: flex; flex-direction: column; gap: 16px; }
+    .sidebar-buy {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden;
+    }
+    .sidebar-img { position: relative; }
+    .sidebar-img img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
+    .sidebar-body { padding: 20px; }
+    .sidebar-name { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 800; line-height: 1.1; margin-bottom: 8px; }
+    .sidebar-rating { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
+    .sidebar-score { font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 800; color: var(--orange); line-height: 1; }
+    .sidebar-score-label { font-size: 11px; color: var(--muted); }
+    .sidebar-price { font-family: 'Barlow Condensed', sans-serif; font-size: 32px; font-weight: 800; margin-bottom: 4px; }
+    .sidebar-was { font-size: 13px; color: var(--muted); text-decoration: line-through; margin-bottom: 16px; }
+    .sidebar-buy-btn { display: block; width: 100%; background: var(--orange); color: #fff; text-align: center; padding: 14px; border-radius: 6px; font-size: 14px; font-weight: 700; text-decoration: none; letter-spacing: 0.02em; transition: background 0.2s; margin-bottom: 10px; }
+    .sidebar-buy-btn:hover { background: #E04A00; }
+    .sidebar-alt { display: flex; flex-direction: column; gap: 6px; }
+    .sidebar-alt a { display: flex; align-items: center; justify-content: space-between; padding: 9px 12px; background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; font-size: 12px; font-weight: 600; color: var(--text); text-decoration: none; transition: border-color 0.2s; }
+    .sidebar-alt a:hover { border-color: #444; }
+    .sidebar-note { font-size: 11px; color: var(--muted); text-align: center; margin-top: 10px; line-height: 1.5; }
+
+    /* Sidebar quick verdict */
+    .sidebar-verdict { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 18px; }
+    .sidebar-verdict h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 800; margin-bottom: 12px; letter-spacing: 0.02em; }
+    .sidebar-verdict ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+    .sidebar-verdict li { font-size: 12px; color: #AAA; padding-left: 16px; position: relative; line-height: 1.5; }
+    .sidebar-verdict li::before { content: '✓'; position: absolute; left: 0; color: var(--green); font-weight: 700; font-size: 11px; }
+    .sidebar-verdict li.no::before { content: '✗'; color: var(--red); }
+    .sidebar-verdict li.no { color: #666; }
+
+    /* ── RELATED PRODUCTS ── */
+    .related-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 16px; }
+    .related-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; text-decoration: none; color: var(--text); transition: border-color 0.2s, transform 0.2s; display: block; }
+    .related-card:hover { border-color: #333; transform: translateY(-2px); }
+    .related-card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
+    .related-card-body { padding: 14px; }
+    .related-cat { font-size: 9px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cyan); margin-bottom: 4px; }
+    .related-title { font-size: 13px; font-weight: 600; line-height: 1.4; margin-bottom: 6px; }
+    .related-price { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 700; color: var(--orange); }
+
+    /* ── FOOTER ── */
+    footer { background: var(--surface); border-top: 1px solid var(--border); padding: 32px 0; }
+    .footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+    .footer-logo { font-family: 'Barlow Condensed', sans-serif; font-size: 24px; font-weight: 800; color: var(--text); }
+    .footer-logo span { color: var(--orange); }
+    .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .footer-links a { font-size: 12px; color: var(--muted); text-decoration: none; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-disclosure { font-size: 11px; color: #333; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); line-height: 1.6; }
+
+    /* ══════════════════════════════
+       MOBILE
+    ══════════════════════════════ */
+    @media (max-width: 900px) {
+      nav { padding: 0 20px; height: 60px; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .disclosure { padding: 7px 20px; }
+      .wrap { padding: 0 20px; }
+      .article-layout { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+      /* Move sidebar buy box above article on mobile */
+      .sidebar { order: -1; }
+      .verdict-grid { grid-template-columns: 1fr; gap: 12px; }
+      .related-grid { grid-template-columns: 1fr 1fr; }
+      .inline-cta { flex-direction: column; align-items: flex-start; }
+      .footer-inner { flex-direction: column; align-items: flex-start; gap: 12px; }
+    }
+    @media (max-width: 560px) {
+      .article-title { font-size: 28px; }
+      .related-grid { grid-template-columns: 1fr; }
+      .rating-label { width: 90px; font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="closeMenu()">✕</button>
+  <a href="index.html" onclick="closeMenu()">Home</a>
+  <a href="index.html#electronics" onclick="closeMenu()">Electronics</a>
+  <a href="index.html#outdoor" onclick="closeMenu()">Outdoor Gear</a>
+  <a href="index.html#top-picks" onclick="closeMenu()">Top Picks</a>
+  <a href="index.html#deals" onclick="closeMenu()">Deals</a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <span class="logo-mark">
+      <svg class="logo-gear" viewBox="0 0 24 24" fill="none" stroke="#FF5500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z"/>
+        <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+      </svg>
+      <svg class="logo-pin" viewBox="0 0 24 24" fill="#00D4FF">
+        <path d="M12 2C8.686 2 6 4.686 6 8c0 5.25 6 14 6 14s6-8.75 6-14c0-3.314-2.686-6-6-6zm0 8.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+      </svg>
+    </span>
+    <span class="logo-text">Gear<span>Grid</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#electronics">Electronics</a>
+    <a href="index.html#outdoor">Outdoor Gear</a>
+    <a href="index.html#top-picks">Top Picks</a>
+    <a href="index.html#deals">Deals</a>
+  </div>
+  <button class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- DISCLOSURE -->
+<div class="disclosure">
+  ℹ️ &nbsp;GearGrid earns a commission from qualifying purchases via affiliate links — at no extra cost to you.
+</div>
+
+<div class="wrap">
+
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <a href="index.html#electronics">Electronics</a>
+    <span>›</span>
+    <a href="#">Headphones</a>
+    <span>›</span>
+    <span style="color:var(--text);">Sony WH-1000XM5 Review</span>
+  </nav>
+
+  <!-- ARTICLE HEADER -->
+  <div class="article-header">
+    <p class="article-cat">⚡ Electronics · Headphones</p>
+    <h1 class="article-title">Sony WH-1000XM5 Review (2025):<br/>Still the Best ANC Headphones?</h1>
+    <p class="article-subtitle">We wore them for 60+ hours across flights, offices, and workouts. Here's the honest verdict on Sony's flagship noise-cancellers.</p>
+    <div class="article-meta">
+      <div class="meta-rating">
+        <span class="score-badge">9.8</span>
+        <span class="stars-lg">★★★★★</span>
+        <span>Editor's Pick</span>
+      </div>
+      <span>·</span>
+      <span>By GearGrid Editorial</span>
+      <span>·</span>
+      <span>Updated May 2025</span>
+      <span>·</span>
+      <span>12 min read</span>
+    </div>
+  </div>
+
+  <!-- TWO COLUMN LAYOUT -->
+  <div class="article-layout">
+
+    <!-- ══ MAIN CONTENT ══ -->
+    <main>
+
+      <!-- Hero image -->
+      <div class="article-hero">
+        <img src="https://placehold.co/900x506/111/00D4FF?text=Sony+WH-1000XM5" alt="Sony WH-1000XM5 Wireless Headphones" />
+        <p class="hero-caption">Sony WH-1000XM5 — tested by GearGrid over 60 hours of use across multiple environments.</p>
+      </div>
+
+      <!-- Quick verdict box -->
+      <div class="verdict-box">
+        <p class="verdict-label">⚡ Quick Verdict</p>
+        <p class="verdict-text">The Sony WH-1000XM5 are the best over-ear noise-cancelling headphones you can buy in 2025. The ANC is genuinely class-leading, the call quality is exceptional, and 30-hour battery life means you'll rarely think about charging. The only real knock: they don't fold flat, which makes them slightly awkward to pack.</p>
+        <div class="verdict-grid">
+          <div>
+            <p class="verdict-col-label" style="color:var(--green);">✓ Pros</p>
+            <ul class="pro-list">
+              <li>Best-in-class noise cancellation</li>
+              <li>Exceptional call quality (8 mics)</li>
+              <li>30-hour battery life</li>
+              <li>Lightweight and comfortable</li>
+              <li>Multipoint Bluetooth (2 devices)</li>
+              <li>Speak-to-Chat auto-pause</li>
+            </ul>
+          </div>
+          <div>
+            <p class="verdict-col-label" style="color:var(--red);">✗ Cons</p>
+            <ul class="con-list">
+              <li>Don't fold flat for travel</li>
+              <li>No IP rating (water resistance)</li>
+              <li>AUX cable requires adapter</li>
+              <li>Bass-heavy out of the box</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Table of contents -->
+      <div class="toc">
+        <h3>📋 In This Review</h3>
+        <ol>
+          <li><a href="#design">Design & Build Quality</a></li>
+          <li><a href="#anc">Noise Cancellation Performance</a></li>
+          <li><a href="#sound">Sound Quality</a></li>
+          <li><a href="#battery">Battery Life & Charging</a></li>
+          <li><a href="#calls">Call Quality</a></li>
+          <li><a href="#specs">Full Specifications</a></li>
+          <li><a href="#comparison">How It Compares</a></li>
+          <li><a href="#verdict">Final Verdict</a></li>
+        </ol>
+      </div>
+
+      <!-- ── ARTICLE BODY ── -->
+      <div class="article-body">
+
+        <h2 id="design">Design & Build Quality</h2>
+        <p>Sony redesigned the XM5 from scratch compared to the XM4. The new headband is thinner, the ear cups are bigger, and the whole thing feels noticeably more premium. At <strong>250g</strong>, they're lighter than competitors like the Bose QuietComfort 45 and Bose QuietComfort Ultra.</p>
+        <p>The matte plastic finish is fingerprint-resistant and doesn't look cheap. Touch controls on the right ear cup work reliably — swipe to skip, tap to pause, hold to activate the voice assistant. Our only design complaint: <strong>they no longer fold flat</strong>. The XM4 folded neatly into its case; the XM5 only swivel to lay side-by-side, making the case bulkier.</p>
+
+        <!-- Inline CTA -->
+        <div class="inline-cta">
+          <div>
+            <div class="inline-cta-text">Sony WH-1000XM5 Headphones</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:2px;">Available in Black, White, Midnight Blue</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+            <div class="inline-cta-price">$349 <span class="was">$399</span></div>
+            <a href="#" class="btn-buy" target="_blank" rel="nofollow noopener">
+              Check Price on Amazon →
+            </a>
+          </div>
+        </div>
+
+        <h2 id="anc">Noise Cancellation Performance</h2>
+        <p>This is where the XM5 earns its price tag. Sony uses <strong>two processors and eight microphones</strong> to analyze and eliminate ambient noise. In our tests — airplane cabin, open-plan office, busy coffee shop — the XM5 outperformed every other headphone we tested at this price point.</p>
+        <p>The ANC is so effective that on a flight, engine noise essentially disappears. Conversations around you become a low murmur. For comparison, the Bose QuietComfort Ultra gets close, but Sony edges it out on low-frequency rumble like air conditioning and plane engines.</p>
+        <p><strong>Ambient sound mode</strong> (hear-through) is equally impressive — it sounds natural enough that you might forget it's on. A smart "Speak-to-Chat" feature automatically pauses music and enables ambient mode when you start talking, then resumes when you stop.</p>
+
+        <h2 id="sound">Sound Quality</h2>
+        <p>Sony tunes these headphones with a bass-forward signature, which sounds great for pop, hip-hop, and electronic music. If you prefer a flatter, more reference sound, you'll want to spend a few minutes in the Sony Headphones Connect app adjusting the EQ — fortunately, the app is excellent.</p>
+        <p>The <strong>LDAC codec</strong> (supported on Android) pushes up to 990kbps of audio data — three times what standard Bluetooth delivers. On compatible Android phones, this makes a noticeable difference in detail and clarity. iPhone users get AAC, which is still good but doesn't unlock the full potential.</p>
+
+        <!-- Rating breakdown -->
+        <div class="rating-breakdown">
+          <h3>Score Breakdown</h3>
+          <div class="rating-row">
+            <span class="rating-label">Noise Cancelling</span>
+            <div class="rating-bar-wrap"><div class="rating-bar" style="width:99%;"></div></div>
+            <span class="rating-score">9.9</span>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Sound Quality</span>
+            <div class="rating-bar-wrap"><div class="rating-bar" style="width:95%;"></div></div>
+            <span class="rating-score">9.5</span>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Comfort</span>
+            <div class="rating-bar-wrap"><div class="rating-bar" style="width:93%;"></div></div>
+            <span class="rating-score">9.3</span>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Battery Life</span>
+            <div class="rating-bar-wrap"><div class="rating-bar" style="width:96%;"></div></div>
+            <span class="rating-score">9.6</span>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Call Quality</span>
+            <div class="rating-bar-wrap"><div class="rating-bar" style="width:96%;"></div></div>
+            <span class="rating-score">9.6</span>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Value</span>
+            <div class="rating-bar-wrap"><div class="rating-bar" style="width:90%;"></div></div>
+            <span class="rating-score">9.0</span>
+          </div>
+          <div class="overall-score">
+            <div class="big-score">9.8</div>
+            <div>
+              <div class="score-stars">★★★★★</div>
+              <div style="font-size:14px;font-weight:600;color:var(--text);">Outstanding</div>
+              <div class="score-label">GearGrid Overall Score</div>
+            </div>
+          </div>
+        </div>
+
+        <h2 id="battery">Battery Life & Charging</h2>
+        <p>Sony rates the XM5 at <strong>30 hours with ANC on</strong> — and in our real-world testing, we hit 28–31 hours consistently. With ANC off, you'll get closer to 40 hours. A 3-minute quick charge delivers 3 hours of playback, which is a lifesaver when you're running to catch a flight.</p>
+        <p>It charges via USB-C, which means you can use the same cable as your phone and laptop. No proprietary chargers to keep track of.</p>
+
+        <h2 id="calls">Call Quality</h2>
+        <p>Eight microphones with Sony's AI-based noise suppression algorithm make these some of the best headphones for calls on the market. In outdoor tests with wind and traffic, callers reported hearing us clearly with minimal background noise. On video calls, multiple people asked if we were using a dedicated microphone.</p>
+
+        <h2 id="specs">Full Specifications</h2>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;overflow:hidden;">
+          <table class="specs-table">
+            <tr><td>Driver Size</td><td>30mm</td></tr>
+            <tr><td>Frequency Response</td><td>4Hz – 40,000Hz (LDAC)</td></tr>
+            <tr><td>Connectivity</td><td>Bluetooth 5.2, NFC, USB-C audio</td></tr>
+            <tr><td>Codecs</td><td>LDAC, AAC, SBC</td></tr>
+            <tr><td>Battery Life (ANC on)</td><td>30 hours</td></tr>
+            <tr><td>Battery Life (ANC off)</td><td>40 hours</td></tr>
+            <tr><td>Quick Charge</td><td>3 min → 3 hours</td></tr>
+            <tr><td>Microphones</td><td>8 (4 for ANC, 4 for calls)</td></tr>
+            <tr><td>Weight</td><td>250g</td></tr>
+            <tr><td>Foldable</td><td>Swivel only (not flat fold)</td></tr>
+            <tr><td>Multipoint</td><td>Yes (2 devices simultaneously)</td></tr>
+            <tr><td>Water Resistance</td><td>None</td></tr>
+            <tr><td>What's in the box</td><td>Headphones, carrying case, USB-C cable, 3.5mm adapter</td></tr>
+          </table>
+        </div>
+
+        <h2 id="comparison">How It Compares</h2>
+        <div class="compare-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Score</th>
+                <th>Price</th>
+                <th>Battery</th>
+                <th>Folds Flat</th>
+                <th>Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="our-pick">
+                <td><strong>Sony WH-1000XM5</strong> <span style="color:var(--orange);font-size:10px;font-weight:700;margin-left:6px;">OUR PICK</span></td>
+                <td class="highlight">9.8</td>
+                <td>$349</td>
+                <td>30 hrs</td>
+                <td class="cross">✗</td>
+                <td><a href="#" target="_blank" rel="nofollow noopener" style="color:var(--orange);font-size:12px;font-weight:600;">Amazon →</a></td>
+              </tr>
+              <tr>
+                <td>Bose QuietComfort Ultra</td>
+                <td>9.5</td>
+                <td>$429</td>
+                <td>24 hrs</td>
+                <td class="check">✓</td>
+                <td><a href="#" target="_blank" rel="nofollow noopener" style="color:var(--orange);font-size:12px;font-weight:600;">Amazon →</a></td>
+              </tr>
+              <tr>
+                <td>Apple AirPods Max (USB-C)</td>
+                <td>9.2</td>
+                <td>$549</td>
+                <td>20 hrs</td>
+                <td class="cross">✗</td>
+                <td><a href="#" target="_blank" rel="nofollow noopener" style="color:var(--orange);font-size:12px;font-weight:600;">Apple →</a></td>
+              </tr>
+              <tr>
+                <td>Sony WH-1000XM4</td>
+                <td>9.1</td>
+                <td>$249</td>
+                <td>30 hrs</td>
+                <td class="check">✓</td>
+                <td><a href="#" target="_blank" rel="nofollow noopener" style="color:var(--orange);font-size:12px;font-weight:600;">Amazon →</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="verdict">Final Verdict</h2>
+        <p>The Sony WH-1000XM5 are the headphones we'd recommend to almost anyone who asks. The noise cancellation is the best on the market, call quality is excellent, battery life is outstanding, and the app gives you fine-grained control over the sound. At $349, they're not cheap — but they're cheaper than Bose and Apple while outperforming both on the features that matter most.</p>
+        <p><strong>Buy them if:</strong> you travel frequently, work in noisy environments, or simply want the best over-ear headphones available.</p>
+        <p><strong>Consider alternatives if:</strong> you need a flat-fold design for travel packing, or you're an iPhone user who wants seamless Apple ecosystem integration (in which case, AirPods Max are worth the premium).</p>
+
+        <div class="inline-cta" style="border-color:var(--orange);border-left-width:4px;">
+          <div>
+            <div class="inline-cta-text" style="font-size:16px;">Sony WH-1000XM5 — Editor's Pick</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:3px;">Best noise-cancelling headphones in 2025</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+            <div class="inline-cta-price">$349</div>
+            <a href="#" class="btn-buy" target="_blank" rel="nofollow noopener">Check Price on Amazon →</a>
+          </div>
+        </div>
+
+        <!-- Related Products -->
+        <h2 style="margin-top:48px;">You Might Also Like</h2>
+        <div class="related-grid">
+          <a href="#" class="related-card">
+            <img src="https://placehold.co/400x300/141414/00D4FF?text=." alt="Anker Q45" />
+            <div class="related-card-body">
+              <p class="related-cat">Electronics</p>
+              <p class="related-title">Anker Soundcore Q45 — Best Budget ANC</p>
+              <p class="related-price">$59</p>
+            </div>
+          </a>
+          <a href="#" class="related-card">
+            <img src="https://placehold.co/400x300/141414/00D4FF?text=." alt="Bose QC45" />
+            <div class="related-card-body">
+              <p class="related-cat">Electronics</p>
+              <p class="related-title">Bose QuietComfort Ultra — Runner Up</p>
+              <p class="related-price">$429</p>
+            </div>
+          </a>
+          <a href="#" class="related-card">
+            <img src="https://placehold.co/400x300/141414/39D96B?text=." alt="Garmin Watch" />
+            <div class="related-card-body">
+              <p class="related-cat">Outdoor Gear</p>
+              <p class="related-title">Garmin Instinct 2 Solar GPS Watch</p>
+              <p class="related-price">$449</p>
+            </div>
+          </a>
+        </div>
+
+      </div><!-- /article-body -->
+    </main>
+
+    <!-- ══ SIDEBAR ══ -->
+    <aside class="sidebar">
+
+      <!-- Buy box -->
+      <div class="sidebar-buy">
+        <div class="sidebar-img">
+          <img src="https://placehold.co/340x255/111/00D4FF?text=Sony+XM5" alt="Sony WH-1000XM5" />
+        </div>
+        <div class="sidebar-body">
+          <p class="sidebar-name">Sony WH-1000XM5 Wireless Headphones</p>
+          <div class="sidebar-rating">
+            <div>
+              <div class="sidebar-score">9.8</div>
+              <div class="sidebar-score-label">GearGrid Score</div>
+            </div>
+            <div style="margin-left:auto;text-align:right;">
+              <div style="color:#FFAA00;font-size:16px;">★★★★★</div>
+              <div style="font-size:11px;color:var(--muted);">Editor's Pick</div>
+            </div>
+          </div>
+          <div class="sidebar-price">$349</div>
+          <div class="sidebar-was">Was $399 — Save $50</div>
+          <a href="#" class="sidebar-buy-btn" target="_blank" rel="nofollow noopener">
+            Check Price on Amazon →
+          </a>
+          <div class="sidebar-alt">
+            <a href="#" target="_blank" rel="nofollow noopener">
+              <span>Best Buy</span>
+              <span style="color:var(--muted);">$349 →</span>
+            </a>
+            <a href="#" target="_blank" rel="nofollow noopener">
+              <span>Target</span>
+              <span style="color:var(--muted);">$349 →</span>
+            </a>
+          </div>
+          <p class="sidebar-note">
+            🔒 Prices updated daily. Buying through our links supports GearGrid at no cost to you.
+          </p>
+        </div>
+      </div>
+
+      <!-- Quick verdict -->
+      <div class="sidebar-verdict">
+        <h4>Is It Right For You?</h4>
+        <ul>
+          <li>Frequent flyers & commuters</li>
+          <li>Open office workers</li>
+          <li>Android users (LDAC quality)</li>
+          <li>Long listening sessions</li>
+          <li>Call-heavy work setups</li>
+          <li class="no">Gym / workout use</li>
+          <li class="no">Ultra-compact travel packing</li>
+          <li class="no">iPhone ecosystem fans</li>
+        </ul>
+      </div>
+
+    </aside>
+  </div><!-- /article-layout -->
+</div><!-- /wrap -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-logo">Gear<span>Grid</span></div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#electronics">Electronics</a>
+        <a href="index.html#outdoor">Outdoor Gear</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+      <p style="font-size:11px;color:var(--muted);">© 2025 GearGrid. All rights reserved.</p>
+    </div>
+    <p class="footer-disclosure">
+      <strong style="color:#444;">Affiliate Disclosure:</strong> GearGrid participates in the Amazon Associates Program and other affiliate programs. When you click our links and make a purchase, we may earn a small commission at no additional cost to you. Our editorial opinions are our own and are never influenced by affiliate relationships.
+    </p>
+  </div>
+</footer>
+
+<script>
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburgerBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  });
+  function closeMenu() {
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  // Smooth scroll for TOC links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+  // Animate rating bars on scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('.rating-bar').forEach(bar => {
+          bar.style.width = bar.style.width; // trigger reflow
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.rating-breakdown').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
