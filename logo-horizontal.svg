@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160" width="600" height="160">
+  <defs>
+    <radialGradient id="bgGradH" cx="20%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </radialGradient>
+    <radialGradient id="glowH" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF5500" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#FF5500" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow-o">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-c">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="160" rx="16" fill="url(#bgGradH)"/>
+
+  <!-- Glow behind icon -->
+  <ellipse cx="80" cy="78" rx="55" ry="55" fill="url(#glowH)"/>
+
+  <!-- Gear -->
+  <g transform="translate(80, 76) scale(3.6)" filter="url(#glow-o)">
+    <path d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z"
+      fill="none" stroke="#FF5500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+      transform="translate(-12, -12)"/>
+  </g>
+
+  <!-- Map pin -->
+  <g transform="translate(80, 72)" filter="url(#glow-c)">
+    <path d="M0 -14 C-8 -14 -14 -8 -14 0 C-14 9 0 23 0 23 C0 23 14 9 14 0 C14 -8 8 -14 0 -14Z"
+      fill="#00D4FF"/>
+    <circle cx="0" cy="0" r="5.5" fill="#0A0A0A"/>
+  </g>
+
+  <!-- Wordmark: GearGrid -->
+  <text x="148" y="70"
+    font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif"
+    font-size="58"
+    font-weight="800"
+    fill="#F0F0EE"
+    letter-spacing="-1">Gear<tspan fill="#FF5500">Grid</tspan></text>
+
+  <!-- Subtext: Reviews -->
+  <text x="150" y="104"
+    font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif"
+    font-size="22"
+    font-weight="600"
+    fill="#00D4FF"
+    letter-spacing="4">REVIEWS</text>
+
+  <!-- Divider line -->
+  <line x1="148" y1="112" x2="430" y2="112" stroke="#FF5500" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+</svg>

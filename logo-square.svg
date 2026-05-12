@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </radialGradient>
+    <radialGradient id="glowOrange" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF5500" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#FF5500" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#00D4FF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow-orange">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-cyan">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" rx="40" fill="url(#bgGrad)"/>
+
+  <!-- Subtle glow behind gear -->
+  <ellipse cx="200" cy="185" rx="90" ry="90" fill="url(#glowOrange)"/>
+  <ellipse cx="200" cy="185" rx="50" ry="50" fill="url(#glowCyan)"/>
+
+  <!-- Gear shape -->
+  <g transform="translate(200, 182) scale(4.2)" filter="url(#glow-orange)">
+    <path d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z"
+      fill="none" stroke="#FF5500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+      transform="translate(-12, -12)"/>
+  </g>
+
+  <!-- Map pin in center of gear -->
+  <g transform="translate(200, 178)" filter="url(#glow-cyan)">
+    <path d="M0 -18 C-10 -18 -18 -10 -18 0 C-18 12 0 30 0 30 C0 30 18 12 18 0 C18 -10 10 -18 0 -18Z"
+      fill="#00D4FF"/>
+    <circle cx="0" cy="0" r="7" fill="#0A0A0A"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="200" y="295"
+    font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif"
+    font-size="56"
+    font-weight="800"
+    fill="#F0F0EE"
+    text-anchor="middle"
+    letter-spacing="-1">GEARGRID</text>
+
+  <text x="200" y="344"
+    font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif"
+    font-size="32"
+    font-weight="700"
+    fill="#FF5500"
+    text-anchor="middle"
+    letter-spacing="4">REVIEWS</text>
+
+  <!-- Thin cyan underline accent -->
+  <line x1="130" y1="358" x2="270" y2="358" stroke="#00D4FF" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+</svg>
