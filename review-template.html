@@ -298,11 +298,11 @@
       /* Specs wrapper — allow horizontal scroll if needed */
       .specs-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 
-      /* Comparison table — ensure horizontal scroll works */
-      .compare-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 16px -20px; padding: 0 20px; border-radius: 0; }
-      .compare-table { min-width: 480px; font-size: 12px; }
-      .compare-table th { padding: 10px 10px; font-size: 9px; }
-      .compare-table td { padding: 11px 10px; }
+      /* Comparison table — horizontal scroll */
+      .compare-wrap { overflow-x: scroll; -webkit-overflow-scrolling: touch; margin: 16px -20px; padding: 0; border-radius: 0; width: calc(100% + 40px); }
+      .compare-table { min-width: 520px; font-size: 12px; }
+      .compare-table th { padding: 10px 12px; font-size: 9px; white-space: nowrap; }
+      .compare-table td { padding: 11px 12px; }
 
       /* Inline CTAs */
       .inline-cta-img { width: 80px; height: 80px; }
