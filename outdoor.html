@@ -1223,5 +1223,17 @@
     });
   });
 </script>
+<script>
+  document.querySelectorAll('.product-card').forEach(function(card) {
+    var link = card.querySelector('.check-price');
+    var img = card.querySelector('.card-img');
+    if (link && img) {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', function() {
+        window.open(link.href, '_blank', 'noopener,noreferrer');
+      });
+    }
+  });
+</script>
 </body>
 </html>
