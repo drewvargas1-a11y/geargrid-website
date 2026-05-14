@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name='impact-site-verification' value='3b114e65-600f-410c-9789-6d4332ddfb93'>
+  <title>Blog — Gear Reviews & Buying Guides | GearGrid</title>
+  <meta name="description" content="In-depth gear reviews, buying guides, and product comparisons for electronics and outdoor equipment. Find the right gear before you buy." />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "GearGrid Blog",
+    "url": "https://geargridreviews.com/blog.html",
+    "description": "In-depth gear reviews, buying guides, and product comparisons.",
+    "publisher": { "@type": "Organization", "name": "GearGrid", "url": "https://geargridreviews.com" }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+    :root {
+      --bg: #0A0A0A; --surface: #111111; --surface2: #181818;
+      --border: #222222; --text: #F0F0EE; --muted: #666666;
+      --orange: #FF5500; --cyan: #00D4FF; --green: #39D96B;
+    }
+    body { background: var(--bg); font-family: 'Inter', sans-serif; color: var(--text); }
+    .cond { font-family: 'Barlow Condensed', sans-serif; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(10,10,10,0.95); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 48px; display: flex; align-items: center; justify-content: space-between;
+      height: 68px;
+    }
+    .nav-logo {
+      font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 800;
+      letter-spacing: -0.01em; text-decoration: none; color: var(--text);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .nav-logo .logo-text span { color: var(--orange); }
+    .logo-mark { position: relative; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; flex-shrink: 0; }
+    .logo-gear { position: absolute; width: 40px; height: 40px; }
+    .logo-pin { position: absolute; width: 14px; height: 14px; }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a { font-size: 14px; font-weight: 500; color: var(--muted); text-decoration: none; transition: color 0.15s ease; }
+    .nav-links a:hover, .nav-links a.active { color: var(--text); }
+    .nav-search {
+      display: flex; align-items: center; gap: 8px;
+      background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+      padding: 8px 14px;
+    }
+    .nav-search input { background: none; border: none; outline: none; font-size: 13px; color: var(--text); width: 160px; }
+    .nav-search input::placeholder { color: var(--muted); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; }
+
+    .mobile-menu {
+      position: fixed; inset: 0; z-index: 200;
+      background: var(--bg); padding: 24px;
+      display: flex; flex-direction: column; gap: 4px;
+      transform: translateX(-100%); transition: transform 0.3s ease;
+    }
+    .mobile-menu.open { transform: translateX(0); }
+    .mobile-menu a { display: block; padding: 14px 0; font-size: 22px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; color: var(--text); text-decoration: none; border-bottom: 1px solid var(--border); }
+    .mobile-close { align-self: flex-end; background: none; border: none; color: var(--muted); font-size: 24px; cursor: pointer; margin-bottom: 16px; }
+
+    .disclosure {
+      background: var(--surface); border-bottom: 1px solid var(--border);
+      padding: 10px 48px; display: flex; align-items: center; gap: 8px;
+      font-size: 12px; color: var(--muted);
+    }
+    .disclosure a { color: var(--muted); }
+
+    /* BLOG HERO */
+    .blog-hero {
+      padding: 80px 48px 72px;
+      text-align: center;
+      background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(255,85,0,0.07) 0%, transparent 70%);
+      border-bottom: 1px solid var(--border);
+    }
+    .blog-hero-label {
+      font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 14px;
+    }
+    .blog-hero-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(52px, 7vw, 84px); font-weight: 800;
+      letter-spacing: -0.03em; line-height: 0.95; color: var(--text); margin-bottom: 20px;
+    }
+    .blog-hero-desc {
+      font-size: 17px; color: var(--muted); line-height: 1.7;
+      max-width: 540px; margin: 0 auto;
+    }
+
+    /* POSTS GRID */
+    .posts-section { padding: 64px 48px 80px; max-width: 1240px; margin: 0 auto; }
+    .posts-section-head { margin-bottom: 40px; }
+    .posts-section-head h2 {
+      font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 700;
+      letter-spacing: -0.02em; color: var(--text);
+    }
+    .posts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+
+    .post-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+      overflow: hidden; display: flex; flex-direction: column;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+      text-decoration: none;
+    }
+    .post-card:hover { transform: translateY(-4px); border-color: rgba(255,85,0,0.4); }
+    .post-card-img { aspect-ratio: 16/9; overflow: hidden; position: relative; }
+    .post-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; display: block; }
+    .post-card:hover .post-card-img img { transform: scale(1.04); }
+    .post-card-img-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 60%);
+    }
+    .post-card-badge {
+      position: absolute; top: 14px; left: 14px;
+      font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 4px 10px; border-radius: 4px;
+    }
+    .badge-electronics { background: rgba(0,212,255,0.15); color: var(--cyan); border: 1px solid rgba(0,212,255,0.25); }
+    .badge-outdoor { background: rgba(57,217,107,0.15); color: var(--green); border: 1px solid rgba(57,217,107,0.25); }
+
+    .post-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+    .post-cat {
+      font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;
+    }
+    .post-cat.electronics { color: var(--cyan); }
+    .post-cat.outdoor { color: var(--green); }
+    .post-cat.general { color: var(--orange); }
+    .post-title {
+      font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 700;
+      line-height: 1.2; color: var(--text); margin-bottom: 10px; letter-spacing: -0.01em;
+      transition: color 0.15s ease;
+    }
+    .post-card:hover .post-title { color: var(--orange); }
+    .post-excerpt { font-size: 13px; color: var(--muted); line-height: 1.65; flex: 1; margin-bottom: 20px; }
+    .post-meta { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #555; }
+    .post-meta-dot { width: 3px; height: 3px; border-radius: 50%; background: #444; }
+    .post-read-more {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 13px; font-weight: 600; color: var(--orange); margin-top: 14px;
+      transition: gap 0.15s ease;
+    }
+    .post-card:hover .post-read-more { gap: 10px; }
+
+    /* FOOTER */
+    footer { background: var(--surface); border-top: 1px solid var(--border); padding: 60px 48px 32px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    .footer-logo { font-family: 'Barlow Condensed', sans-serif; font-size: 32px; font-weight: 800; color: var(--text); margin-bottom: 12px; letter-spacing: -0.01em; }
+    .footer-logo span { color: var(--orange); }
+    .footer-desc { font-size: 14px; color: var(--muted); line-height: 1.7; }
+    .footer-col h4 { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 16px; letter-spacing: 0.04em; text-transform: uppercase; }
+    .footer-col a { display: block; font-size: 14px; color: var(--muted); text-decoration: none; margin-bottom: 10px; transition: color 0.15s ease; }
+    .footer-col a:hover { color: var(--text); }
+    .footer-disclosure { font-size: 12px; color: #444; line-height: 1.7; padding: 24px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 24px; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #444; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom a { color: #444; text-decoration: none; }
+    .footer-bottom a:hover { color: var(--muted); }
+
+    @media (max-width: 900px) {
+      nav { padding: 0 20px; }
+      .nav-links, .nav-search { display: none; }
+      .hamburger { display: flex; }
+      .blog-hero { padding: 56px 20px 48px; }
+      .posts-section { padding: 40px 20px 60px; }
+      .posts-grid { grid-template-columns: 1fr; gap: 20px; }
+      .disclosure { padding: 10px 20px; }
+      footer { padding: 48px 20px 24px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="closeMenu()">✕</button>
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid var(--border);">
+    <span class="logo-mark" style="width:48px;height:48px;">
+      <svg class="logo-gear" style="width:48px;height:48px;" viewBox="0 0 24 24" fill="none" stroke="#FF5500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z"/><path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
+      <svg class="logo-pin" style="width:16px;height:16px;" viewBox="0 0 24 24" fill="#00D4FF"><path d="M12 2C8.686 2 6 4.686 6 8c0 5.25 6 14 6 14s6-8.75 6-14c0-3.314-2.686-6-6-6zm0 8.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+    </span>
+    <span style="font-family:'Barlow Condensed',sans-serif;font-size:34px;font-weight:800;color:var(--text);letter-spacing:-0.01em;">Gear<span style="color:var(--orange);">Grid</span></span>
+  </div>
+  <a href="index.html" onclick="closeMenu()">Home</a>
+  <a href="electronics.html" onclick="closeMenu()">Electronics</a>
+  <a href="outdoor.html" onclick="closeMenu()">Outdoor Gear</a>
+  <a href="blog.html" onclick="closeMenu()">Blog</a>
+  <a href="about.html" onclick="closeMenu()">About</a>
+</div>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <span class="logo-mark">
+      <svg class="logo-gear" viewBox="0 0 24 24" fill="none" stroke="#FF5500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z"/><path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
+      <svg class="logo-pin" viewBox="0 0 24 24" fill="#00D4FF"><path d="M12 2C8.686 2 6 4.686 6 8c0 5.25 6 14 6 14s6-8.75 6-14c0-3.314-2.686-6-6-6zm0 8.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+    </span>
+    <span class="logo-text">Gear<span>Grid</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="electronics.html">Electronics</a>
+    <a href="outdoor.html">Outdoor Gear</a>
+    <a href="blog.html" class="active">Blog</a>
+    <a href="index.html#top-picks">Top Picks</a>
+    <a href="about.html">About</a>
+  </div>
+  <div class="nav-search">
+    <svg width="14" height="14" fill="none" stroke="#666" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" placeholder="Search articles..." />
+  </div>
+  <button class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="disclosure">
+  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+  <span>GearGrid is reader-supported. We may earn a commission when you buy through our links at no extra cost to you.</span>
+</div>
+
+<!-- BLOG HERO -->
+<div class="blog-hero">
+  <p class="blog-hero-label">✍ GearGrid Blog</p>
+  <h1 class="blog-hero-title">Buying Guides &<br>Gear Reviews</h1>
+  <p class="blog-hero-desc">In-depth comparisons, hands-on reviews, and expert buying guides. We do the research so you buy right the first time.</p>
+</div>
+
+<!-- POSTS -->
+<div class="posts-section">
+  <div class="posts-section-head">
+    <h2>Latest Articles</h2>
+  </div>
+  <div class="posts-grid">
+
+    <a href="blog/best-budget-smartwatch-2026.html" class="post-card">
+      <div class="post-card-img">
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=70&w=800&auto=format&fit=crop" alt="Best Budget Smartwatch 2026" loading="lazy" />
+        <div class="post-card-img-overlay"></div>
+        <span class="post-card-badge badge-electronics">Electronics</span>
+      </div>
+      <div class="post-card-body">
+        <p class="post-cat electronics">Smartwatches</p>
+        <div class="post-title">Best Budget Smartwatch 2026: Top Picks Under $100</div>
+        <p class="post-excerpt">Budget smartwatches have quietly gotten very good. We tested 10+ models to find which ones deliver real AMOLED displays, accurate GPS, and long battery life without breaking the bank.</p>
+        <div class="post-meta">
+          <span>May 2026</span>
+          <span class="post-meta-dot"></span>
+          <span>7 min read</span>
+        </div>
+        <span class="post-read-more">Read Article →</span>
+      </div>
+    </a>
+
+    <a href="blog/best-oled-tv-2026.html" class="post-card">
+      <div class="post-card-img">
+        <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?fm=jpg&q=70&w=800&auto=format&fit=crop" alt="LG C5 vs Samsung S95D OLED TV 2026" loading="lazy" />
+        <div class="post-card-img-overlay"></div>
+        <span class="post-card-badge badge-electronics">Electronics</span>
+      </div>
+      <div class="post-card-body">
+        <p class="post-cat electronics">TVs</p>
+        <div class="post-title">LG C5 vs Samsung S95D: Best OLED TV 2026</div>
+        <p class="post-excerpt">Two of the best OLED TVs money can buy — but they're built for different buyers. We break down picture quality, gaming performance, and value to help you pick the right one.</p>
+        <div class="post-meta">
+          <span>May 2026</span>
+          <span class="post-meta-dot"></span>
+          <span>8 min read</span>
+        </div>
+        <span class="post-read-more">Read Article →</span>
+      </div>
+    </a>
+
+    <a href="blog/best-camping-tent-beginners-2026.html" class="post-card">
+      <div class="post-card-img">
+        <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?fm=jpg&q=70&w=800&auto=format&fit=crop" alt="Best Camping Tent for Beginners 2026" loading="lazy" />
+        <div class="post-card-img-overlay"></div>
+        <span class="post-card-badge badge-outdoor">Outdoor</span>
+      </div>
+      <div class="post-card-body">
+        <p class="post-cat outdoor">Camping</p>
+        <div class="post-title">Best Camping Tent for Beginners 2026: Top 5 Picks</div>
+        <p class="post-excerpt">Your first camping tent should be quick to pitch, weather-resistant, and forgiving. We reviewed the top beginner-friendly tents so your first trip doesn't turn into a disaster.</p>
+        <div class="post-meta">
+          <span>May 2026</span>
+          <span class="post-meta-dot"></span>
+          <span>6 min read</span>
+        </div>
+        <span class="post-read-more">Read Article →</span>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<footer>
+  <div style="max-width:1240px;margin:0 auto;">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Gear<span>Grid</span></div>
+        <p class="footer-desc">Expert reviews on electronics and outdoor gear. We research, test, and recommend so you can buy with confidence.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Electronics</h4>
+        <a href="electronics.html#headphones">Headphones</a>
+        <a href="electronics.html#tvs">TVs</a>
+        <a href="electronics.html#drones">Drones</a>
+        <a href="electronics.html#lg">LG</a>
+        <a href="electronics.html#soundcore">Soundcore</a>
+      </div>
+      <div class="footer-col">
+        <h4>Outdoor Gear</h4>
+        <a href="outdoor.html#camping">Camping</a>
+        <a href="outdoor.html#grills">Grills & BBQ</a>
+        <a href="outdoor.html#coleman">Coleman</a>
+        <a href="outdoor.html#marmot">Marmot</a>
+        <a href="outdoor.html#tiki-brand">TIKI Brand</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="blog.html">Blog</a>
+        <a href="#disclosure">Affiliate Disclosure</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+    <div id="disclosure" class="footer-disclosure">
+      <strong style="color:#444;">Affiliate Disclosure:</strong> GearGrid participates in affiliate programs including Amazon Associates, CJ Affiliate, and others. When you click our links and make a purchase, we may earn a small commission at no additional cost to you. Our editorial opinions are our own and are never influenced by affiliate partnerships.
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 GearGrid. All rights reserved.</p>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#disclosure">Affiliate Disclosure</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburgerBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  });
+  function closeMenu() {
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+</script>
+</body>
+</html>
