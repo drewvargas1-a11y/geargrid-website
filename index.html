@@ -364,6 +364,52 @@
     .rank { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 800; color: var(--muted); }
     .rank.top { color: var(--orange); }
 
+    /* ── BLOG CARDS ── */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .blog-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex; flex-direction: column;
+      text-decoration: none;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .blog-card:hover { border-color: #333; transform: translateY(-2px); }
+    .blog-card-img {
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      background: var(--surface2);
+      position: relative;
+    }
+    .blog-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+    .blog-card:hover .blog-card-img img { transform: scale(1.04); }
+    .blog-card-img-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 60%);
+    }
+    .blog-card-body { padding: 18px; display: flex; flex-direction: column; flex: 1; }
+    .blog-cat {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; margin-bottom: 8px;
+    }
+    .blog-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 20px; font-weight: 700; line-height: 1.2;
+      color: var(--text); margin-bottom: 8px;
+    }
+    .blog-excerpt { font-size: 12px; color: var(--muted); line-height: 1.6; flex: 1; margin-bottom: 14px; }
+    .blog-read {
+      font-size: 12px; font-weight: 600; color: var(--orange);
+      letter-spacing: 0.04em;
+    }
+    @media (max-width: 900px) { .blog-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .blog-grid { grid-template-columns: 1fr; } }
+
     /* ── NEWSLETTER ── */
     .newsletter {
       background: var(--surface);
@@ -1100,6 +1146,61 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- FROM THE BLOG -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="section-label" style="color:var(--orange);">✍️ Latest Articles</p>
+        <h2 class="section-title">From the Blog</h2>
+      </div>
+      <a href="blog.html" class="view-all">All Articles →</a>
+    </div>
+    <div class="blog-grid">
+
+      <a href="blog/best-budget-smartwatch-2026.html" class="blog-card">
+        <div class="blog-card-img">
+          <img src="https://m.media-amazon.com/images/I/610sI+grqwL._AC_SL1500_.jpg" alt="Best Budget Smartwatch 2026" />
+          <div class="blog-card-img-overlay"></div>
+        </div>
+        <div class="blog-card-body">
+          <p class="blog-cat" style="color:var(--cyan);">⚡ Electronics</p>
+          <h3 class="blog-title">Best Budget Smartwatch 2026</h3>
+          <p class="blog-excerpt">Top affordable smartwatches that don't compromise on features — fitness tracking, GPS, and battery life compared.</p>
+          <span class="blog-read">Read Article →</span>
+        </div>
+      </a>
+
+      <a href="blog/best-oled-tv-2026.html" class="blog-card">
+        <div class="blog-card-img">
+          <img src="https://m.media-amazon.com/images/I/71CpBpf1Q+L._AC_SL1500_.jpg" alt="Best OLED TV 2026" />
+          <div class="blog-card-img-overlay"></div>
+        </div>
+        <div class="blog-card-body">
+          <p class="blog-cat" style="color:var(--cyan);">⚡ Electronics</p>
+          <h3 class="blog-title">Best OLED TV 2026</h3>
+          <p class="blog-excerpt">OLED TVs ranked by picture quality, gaming performance, and value. Find the right screen for your living room.</p>
+          <span class="blog-read">Read Article →</span>
+        </div>
+      </a>
+
+      <a href="blog/best-camping-tent-beginners-2026.html" class="blog-card">
+        <div class="blog-card-img">
+          <img src="https://m.media-amazon.com/images/I/71ADgccHF4L._AC_SL1500_.jpg" alt="Best Camping Tent for Beginners 2026" />
+          <div class="blog-card-img-overlay"></div>
+        </div>
+        <div class="blog-card-body">
+          <p class="blog-cat" style="color:var(--green);">🏕️ Outdoor Gear</p>
+          <h3 class="blog-title">Best Camping Tent for Beginners 2026</h3>
+          <p class="blog-excerpt">Easy-setup tents for first-time campers — waterproof, spacious, and under $150. Our top picks tested in the field.</p>
+          <span class="blog-read">Read Article →</span>
+        </div>
+      </a>
+
     </div>
   </div>
 </section>
