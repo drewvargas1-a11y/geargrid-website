@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Use — GearGrid</title>
+  <meta name="description" content="GearGrid Terms of Use. The rules and conditions for using geargridreviews.com." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+    :root { --bg: #0A0A0A; --surface: #111111; --surface2: #181818; --border: #222222; --text: #F0F0EE; --muted: #666666; --orange: #FF5500; }
+    body { background: var(--bg); font-family: 'Inter', sans-serif; color: var(--text); }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(10,10,10,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 48px; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .nav-logo { font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 800; text-decoration: none; color: var(--text); }
+    .nav-logo span { color: var(--orange); }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a { font-size: 13px; font-weight: 500; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px; flex-direction: column; gap: 5px; }
+    .hamburger span { display: block; width: 20px; height: 2px; background: var(--text); border-radius: 2px; }
+    .mobile-menu { display: none; position: fixed; inset: 0; background: var(--bg); z-index: 200; flex-direction: column; padding: 80px 28px 40px; gap: 4px; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: 'Barlow Condensed', sans-serif; font-size: 44px; font-weight: 700; color: var(--text); text-decoration: none; border-bottom: 1px solid var(--border); padding: 12px 0; }
+    .mobile-close { position: absolute; top: 18px; right: 20px; background: none; border: none; color: var(--muted); font-size: 28px; cursor: pointer; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 48px; }
+    .page-hero { padding: 64px 0 40px; border-bottom: 1px solid var(--border); }
+    .page-tag { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,85,0,0.08); border: 1px solid rgba(255,85,0,0.25); border-radius: 100px; padding: 4px 12px; font-size: 11px; font-weight: 700; color: var(--orange); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px; }
+    .page-hero h1 { font-family: 'Barlow Condensed', sans-serif; font-size: 52px; font-weight: 800; line-height: 0.95; letter-spacing: -0.02em; margin-bottom: 12px; }
+    .page-hero .updated { font-size: 12px; color: var(--muted); }
+    .content { padding: 48px 0 80px; }
+    .content h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 24px; font-weight: 800; margin-top: 40px; margin-bottom: 12px; }
+    .content h2:first-child { margin-top: 0; }
+    .content p { font-size: 14px; color: #888; line-height: 1.9; margin-bottom: 14px; }
+    .content p a { color: var(--orange); text-decoration: none; }
+    .content ul { padding-left: 20px; margin-bottom: 14px; }
+    .content ul li { font-size: 14px; color: #888; line-height: 1.9; margin-bottom: 6px; }
+    footer { background: var(--surface); border-top: 1px solid var(--border); padding: 48px 0 24px; }
+    .footer-wrap { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+    .footer-logo { font-family: 'Barlow Condensed', sans-serif; font-size: 26px; font-weight: 800; color: var(--text); margin-bottom: 12px; }
+    .footer-logo span { color: var(--orange); }
+    .footer-desc { font-size: 13px; color: var(--muted); line-height: 1.7; }
+    .footer-col h4 { font-size: 11px; font-weight: 700; color: var(--text); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 16px; }
+    .footer-col a { display: block; font-size: 13px; color: var(--muted); text-decoration: none; margin-bottom: 10px; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--text); }
+    .footer-bottom { border-top: 1px solid var(--border); padding-top: 20px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; }
+    .footer-bottom p { font-size: 11px; color: var(--muted); }
+    .footer-bottom a { font-size: 11px; color: var(--muted); text-decoration: none; }
+    .footer-disclosure { font-size: 11px; color: #3A3A3A; line-height: 1.6; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); }
+    @media (max-width: 900px) { nav { padding: 0 20px; height: 56px; } .nav-links { display: none; } .hamburger { display: flex; } .wrap { padding: 0 20px; } .footer-wrap { padding: 0 20px; } .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; } }
+    @media (max-width: 560px) { .wrap { padding: 0 16px; } .footer-wrap { padding: 0 16px; } .footer-grid { grid-template-columns: 1fr; gap: 20px; } .footer-bottom { flex-direction: column; align-items: flex-start; } }
+  </style>
+</head>
+<body>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="closeMenu()">✕</button>
+  <a href="index.html" onclick="closeMenu()">Home</a>
+  <a href="electronics.html" onclick="closeMenu()">Electronics</a>
+  <a href="outdoor.html" onclick="closeMenu()">Outdoor Gear</a>
+  <a href="smart-home.html" onclick="closeMenu()">Smart Home</a>
+  <a href="blog.html" onclick="closeMenu()">Blog</a>
+</div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Gear<span>Grid</span></a>
+  <div class="nav-links">
+    <a href="electronics.html">Electronics</a>
+    <a href="outdoor.html">Outdoor Gear</a>
+    <a href="smart-home.html">Smart Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <button class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="wrap">
+  <div class="page-hero">
+    <div class="page-tag">Legal</div>
+    <h1>Terms of Use</h1>
+    <p class="updated">Last updated: May 16, 2026</p>
+  </div>
+
+  <div class="content">
+    <h2>Acceptance of Terms</h2>
+    <p>By accessing and using geargridreviews.com ("the Site"), you agree to be bound by these Terms of Use. If you do not agree with any part of these terms, please do not use the Site.</p>
+
+    <h2>Use of the Site</h2>
+    <p>GearGrid provides gear reviews, buying guides, and product comparisons for informational purposes. You may use the Site for personal, non-commercial purposes only. You agree not to:</p>
+    <ul>
+      <li>Copy, scrape, or republish our content without written permission</li>
+      <li>Use the Site in any way that violates applicable laws or regulations</li>
+      <li>Attempt to gain unauthorized access to any part of the Site or its infrastructure</li>
+      <li>Use automated tools (bots, scrapers) to extract content from the Site</li>
+    </ul>
+
+    <h2>Content Accuracy</h2>
+    <p>We strive to keep product information, prices, and scores accurate and up to date. However, product prices, availability, and specifications change frequently. GearGrid makes no warranties about the completeness, accuracy, or timeliness of information on the Site.</p>
+    <p>Product prices shown on GearGrid are approximate and may differ from actual prices at the time of purchase. Always verify pricing directly with the retailer before making a purchase decision.</p>
+
+    <h2>Affiliate Relationships</h2>
+    <p>GearGrid participates in affiliate programs including Amazon Associates. We earn commissions on qualifying purchases made through our links. This does not affect the price you pay. Our affiliate relationships are disclosed clearly throughout the Site and do not influence our editorial recommendations.</p>
+
+    <h2>Intellectual Property</h2>
+    <p>All original content on GearGrid — including text, review scores, design, and code — is owned by GearGrid and protected by copyright. Product images may be owned by their respective manufacturers or retailers. You may not reproduce or distribute our original content without prior written permission.</p>
+
+    <h2>Third-Party Links</h2>
+    <p>The Site contains links to third-party websites including Amazon and other retailers. These links are provided for convenience. GearGrid has no control over and assumes no responsibility for the content, privacy policies, or practices of third-party sites.</p>
+
+    <h2>Disclaimer of Warranties</h2>
+    <p>The Site is provided "as is" without warranties of any kind. GearGrid does not warrant that the Site will be uninterrupted, error-free, or free of viruses or other harmful components.</p>
+
+    <h2>Limitation of Liability</h2>
+    <p>To the fullest extent permitted by law, GearGrid shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the Site or any products purchased based on our recommendations.</p>
+
+    <h2>Changes to Terms</h2>
+    <p>We reserve the right to update these Terms of Use at any time. Changes will be posted on this page with an updated date. Continued use of the Site after changes constitutes acceptance of the revised terms.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about these terms? Email us at <a href="mailto:hello@geargridreviews.com">hello@geargridreviews.com</a>.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Gear<span>Grid</span></div>
+        <p class="footer-desc">Expert reviews on electronics and outdoor gear. We research, test, and recommend so you can buy with confidence.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Electronics</h4>
+        <a href="electronics.html">Headphones</a>
+        <a href="electronics.html">TVs</a>
+        <a href="electronics.html">Tablets</a>
+        <a href="electronics.html">Drones</a>
+        <a href="smart-home.html">Smart Home</a>
+      </div>
+      <div class="footer-col">
+        <h4>Outdoor Gear</h4>
+        <a href="outdoor.html">Camping</a>
+        <a href="outdoor.html">Grills & BBQ</a>
+        <a href="outdoor.html">GPS & Navigation</a>
+        <a href="outdoor.html">Backpacks</a>
+        <a href="outdoor.html">Coolers</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="how-we-review.html">How We Review</a>
+        <a href="contact.html">Contact</a>
+        <a href="#disclosure">Affiliate Disclosure</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </div>
+    </div>
+    <div id="disclosure" class="footer-disclosure">
+      <strong style="color:#444;">Affiliate Disclosure:</strong> GearGrid participates in the Amazon Associates affiliate program. When you click our links and make a purchase, we may earn a small commission at no additional cost to you. Our editorial opinions are our own and are never influenced by affiliate partnerships.
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 GearGrid. All rights reserved.</p>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+        <a href="#disclosure">Affiliate Disclosure</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburgerBtn.addEventListener('click', () => { mobileMenu.classList.toggle('open'); document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : ''; });
+  function closeMenu() { mobileMenu.classList.remove('open'); document.body.style.overflow = ''; }
+</script>
+</body>
+</html>

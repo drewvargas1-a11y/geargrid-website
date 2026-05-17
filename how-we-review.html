@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How We Review Products — GearGrid</title>
+  <meta name="description" content="Our review methodology: how GearGrid researches, tests, and scores electronics and outdoor gear so you can trust every recommendation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+    :root { --bg: #0A0A0A; --surface: #111111; --surface2: #181818; --border: #222222; --text: #F0F0EE; --muted: #666666; --orange: #FF5500; --cyan: #00D4FF; --green: #39D96B; }
+    body { background: var(--bg); font-family: 'Inter', sans-serif; color: var(--text); }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(10,10,10,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 48px; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .nav-logo { font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 800; letter-spacing: -0.01em; text-decoration: none; color: var(--text); }
+    .nav-logo span { color: var(--orange); }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a { font-size: 13px; font-weight: 500; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px; flex-direction: column; gap: 5px; }
+    .hamburger span { display: block; width: 20px; height: 2px; background: var(--text); border-radius: 2px; }
+    .mobile-menu { display: none; position: fixed; inset: 0; background: var(--bg); z-index: 200; flex-direction: column; padding: 80px 28px 40px; gap: 4px; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: 'Barlow Condensed', sans-serif; font-size: 44px; font-weight: 700; color: var(--text); text-decoration: none; border-bottom: 1px solid var(--border); padding: 12px 0; }
+    .mobile-close { position: absolute; top: 18px; right: 20px; background: none; border: none; color: var(--muted); font-size: 28px; cursor: pointer; }
+    .wrap { max-width: 800px; margin: 0 auto; padding: 0 48px; }
+    .page-hero { padding: 72px 0 56px; border-bottom: 1px solid var(--border); }
+    .page-tag { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,85,0,0.08); border: 1px solid rgba(255,85,0,0.25); border-radius: 100px; padding: 4px 12px; font-size: 11px; font-weight: 700; color: var(--orange); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px; }
+    .page-hero h1 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(44px, 6vw, 64px); font-weight: 800; line-height: 0.95; letter-spacing: -0.02em; margin-bottom: 16px; }
+    .page-hero h1 span { color: var(--orange); }
+    .page-hero p { font-size: 16px; color: #777; line-height: 1.7; }
+    .content { padding: 56px 0; }
+    .steps { display: flex; flex-direction: column; gap: 0; }
+    .step { display: grid; grid-template-columns: 56px 1fr; gap: 24px; padding: 32px 0; border-bottom: 1px solid var(--border); }
+    .step:last-child { border-bottom: none; }
+    .step-num { font-family: 'Barlow Condensed', sans-serif; font-size: 48px; font-weight: 800; color: var(--orange); line-height: 1; padding-top: 4px; }
+    .step-title { font-family: 'Barlow Condensed', sans-serif; font-size: 24px; font-weight: 700; margin-bottom: 10px; }
+    .step-desc { font-size: 14px; color: #888; line-height: 1.8; }
+    .step-desc strong { color: var(--text); }
+    .score-section { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 32px; margin: 48px 0; }
+    .score-section h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 800; margin-bottom: 20px; }
+    .score-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .score-item { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: var(--surface2); border-radius: 6px; }
+    .score-label { font-size: 13px; color: var(--muted); }
+    .score-pct { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 700; color: var(--orange); }
+    footer { background: var(--surface); border-top: 1px solid var(--border); padding: 48px 0 24px; }
+    .footer-wrap { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+    .footer-logo { font-family: 'Barlow Condensed', sans-serif; font-size: 26px; font-weight: 800; color: var(--text); margin-bottom: 12px; }
+    .footer-logo span { color: var(--orange); }
+    .footer-desc { font-size: 13px; color: var(--muted); line-height: 1.7; }
+    .footer-col h4 { font-size: 11px; font-weight: 700; color: var(--text); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 16px; }
+    .footer-col a { display: block; font-size: 13px; color: var(--muted); text-decoration: none; margin-bottom: 10px; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--text); }
+    .footer-bottom { border-top: 1px solid var(--border); padding-top: 20px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; }
+    .footer-bottom p { font-size: 11px; color: var(--muted); }
+    .footer-bottom a { font-size: 11px; color: var(--muted); text-decoration: none; }
+    .footer-disclosure { font-size: 11px; color: #3A3A3A; line-height: 1.6; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); }
+    @media (max-width: 900px) {
+      nav { padding: 0 20px; height: 56px; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .wrap { padding: 0 20px; }
+      .footer-wrap { padding: 0 20px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .score-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .wrap { padding: 0 16px; }
+      .footer-wrap { padding: 0 16px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 20px; }
+      .step { grid-template-columns: 40px 1fr; gap: 16px; }
+      .step-num { font-size: 36px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="closeMenu()">✕</button>
+  <a href="index.html" onclick="closeMenu()">Home</a>
+  <a href="electronics.html" onclick="closeMenu()">Electronics</a>
+  <a href="outdoor.html" onclick="closeMenu()">Outdoor Gear</a>
+  <a href="smart-home.html" onclick="closeMenu()">Smart Home</a>
+  <a href="blog.html" onclick="closeMenu()">Blog</a>
+</div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Gear<span>Grid</span></a>
+  <div class="nav-links">
+    <a href="electronics.html">Electronics</a>
+    <a href="outdoor.html">Outdoor Gear</a>
+    <a href="smart-home.html">Smart Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <button class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="wrap">
+  <div class="page-hero">
+    <div class="page-tag">Methodology</div>
+    <h1>How We <span>Review.</span></h1>
+    <p>Every score on GearGrid follows the same process. No shortcuts, no sponsored results — just honest research and transparent scoring.</p>
+  </div>
+
+  <div class="content">
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div>
+          <div class="step-title">Category Research</div>
+          <div class="step-desc">We start every review by mapping the full competitive landscape. We identify all major products in a category, read manufacturer specs, and study real-world user feedback across Amazon, Reddit, and enthusiast forums. This ensures we're comparing the right products against each other.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div>
+          <div class="step-title">Expert Source Aggregation</div>
+          <div class="step-desc">We compile and synthesize reviews from trusted expert sources — RTINGS, Wirecutter, Tom's Guide, What Hi-Fi, and category specialists. We look for <strong>consensus across sources</strong> rather than relying on any single opinion. If experts disagree, we flag it.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div>
+          <div class="step-title">Real User Validation</div>
+          <div class="step-desc">Expert labs don't always catch long-term reliability issues, build quality problems, or software quirks. We cross-reference with thousands of verified Amazon and retailer reviews to surface common complaints and repeated praise that appear across a large sample of real owners.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div>
+          <div class="step-title">Value Assessment</div>
+          <div class="step-desc">A product's score is never purely about raw performance — it has to be appropriate for its price. We score products <strong>relative to what you pay</strong>. A $50 product that punches above its weight can outscore a $300 product that underdelivers at its price point.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">05</div>
+        <div>
+          <div class="step-title">Editorial Scoring</div>
+          <div class="step-desc">Our final score is a weighted composite across the criteria below. We update scores when products receive significant firmware updates, when new competitors enter the market, or when long-term reliability data changes our assessment.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="score-section">
+      <h2>Scoring Criteria</h2>
+      <div class="score-grid">
+        <div class="score-item"><span class="score-label">Performance</span><span class="score-pct">30%</span></div>
+        <div class="score-item"><span class="score-label">Value for Money</span><span class="score-pct">25%</span></div>
+        <div class="score-item"><span class="score-label">Build Quality & Durability</span><span class="score-pct">20%</span></div>
+        <div class="score-item"><span class="score-label">Features & Usability</span><span class="score-pct">15%</span></div>
+        <div class="score-item"><span class="score-label">Long-Term Reliability</span><span class="score-pct">10%</span></div>
+      </div>
+    </div>
+
+    <p style="font-size:14px;color:var(--muted);line-height:1.8;">Have a question about how we scored a specific product? <a href="contact.html" style="color:var(--orange);text-decoration:none;">Contact us</a> — we're happy to walk through our reasoning.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Gear<span>Grid</span></div>
+        <p class="footer-desc">Expert reviews on electronics and outdoor gear. We research, test, and recommend so you can buy with confidence.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Electronics</h4>
+        <a href="electronics.html">Headphones</a>
+        <a href="electronics.html">TVs</a>
+        <a href="electronics.html">Tablets</a>
+        <a href="electronics.html">Drones</a>
+        <a href="smart-home.html">Smart Home</a>
+      </div>
+      <div class="footer-col">
+        <h4>Outdoor Gear</h4>
+        <a href="outdoor.html">Camping</a>
+        <a href="outdoor.html">Grills & BBQ</a>
+        <a href="outdoor.html">GPS & Navigation</a>
+        <a href="outdoor.html">Backpacks</a>
+        <a href="outdoor.html">Coolers</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="how-we-review.html">How We Review</a>
+        <a href="contact.html">Contact</a>
+        <a href="#disclosure">Affiliate Disclosure</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </div>
+    </div>
+    <div id="disclosure" class="footer-disclosure">
+      <strong style="color:#444;">Affiliate Disclosure:</strong> GearGrid participates in the Amazon Associates affiliate program. When you click our links and make a purchase, we may earn a small commission at no additional cost to you. Our editorial opinions are our own and are never influenced by affiliate partnerships.
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 GearGrid. All rights reserved.</p>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+        <a href="#disclosure">Affiliate Disclosure</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburgerBtn.addEventListener('click', () => { mobileMenu.classList.toggle('open'); document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : ''; });
+  function closeMenu() { mobileMenu.classList.remove('open'); document.body.style.overflow = ''; }
+</script>
+</body>
+</html>

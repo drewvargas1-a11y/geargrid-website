@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact GearGrid</title>
+  <meta name="description" content="Get in touch with the GearGrid team. Questions, product suggestions, or partnership inquiries — we read every email." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+    :root { --bg: #0A0A0A; --surface: #111111; --surface2: #181818; --border: #222222; --text: #F0F0EE; --muted: #666666; --orange: #FF5500; --cyan: #00D4FF; --green: #39D96B; }
+    body { background: var(--bg); font-family: 'Inter', sans-serif; color: var(--text); }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(10,10,10,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 48px; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .nav-logo { font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 800; letter-spacing: -0.01em; text-decoration: none; color: var(--text); display: flex; align-items: center; gap: 10px; }
+    .nav-logo span { color: var(--orange); }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a { font-size: 13px; font-weight: 500; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-links a.active { color: var(--orange); }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px; flex-direction: column; gap: 5px; }
+    .hamburger span { display: block; width: 20px; height: 2px; background: var(--text); border-radius: 2px; }
+    .mobile-menu { display: none; position: fixed; inset: 0; background: var(--bg); z-index: 200; flex-direction: column; padding: 80px 28px 40px; gap: 4px; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: 'Barlow Condensed', sans-serif; font-size: 44px; font-weight: 700; color: var(--text); text-decoration: none; border-bottom: 1px solid var(--border); padding: 12px 0; letter-spacing: -0.01em; }
+    .mobile-close { position: absolute; top: 18px; right: 20px; background: none; border: none; color: var(--muted); font-size: 28px; cursor: pointer; }
+    .wrap { max-width: 680px; margin: 0 auto; padding: 0 48px; }
+    .page-hero { padding: 72px 0 56px; }
+    .page-tag { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,85,0,0.08); border: 1px solid rgba(255,85,0,0.25); border-radius: 100px; padding: 4px 12px; font-size: 11px; font-weight: 700; color: var(--orange); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px; }
+    .page-hero h1 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(44px, 6vw, 64px); font-weight: 800; line-height: 0.95; letter-spacing: -0.02em; margin-bottom: 16px; }
+    .page-hero h1 span { color: var(--orange); }
+    .page-hero p { font-size: 16px; color: #777; line-height: 1.7; }
+    .contact-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 40px; margin-bottom: 40px; }
+    .contact-card h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 24px; font-weight: 800; margin-bottom: 8px; }
+    .contact-card p { font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 20px; }
+    .email-btn { display: inline-flex; align-items: center; gap: 10px; background: var(--orange); color: #fff; padding: 14px 24px; border-radius: 6px; font-size: 15px; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+    .email-btn:hover { background: #E04A00; transform: scale(1.02); }
+    .email-plain { display: block; margin-top: 12px; font-size: 13px; color: var(--muted); }
+    .email-plain a { color: var(--orange); text-decoration: none; }
+    .topics { display: flex; flex-direction: column; gap: 12px; margin-top: 32px; }
+    .topic { display: flex; align-items: flex-start; gap: 14px; padding: 16px; background: var(--surface2); border-radius: 8px; border: 1px solid var(--border); }
+    .topic-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+    .topic-title { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+    .topic-desc { font-size: 12px; color: var(--muted); line-height: 1.6; }
+    footer { background: var(--surface); border-top: 1px solid var(--border); padding: 48px 0 24px; margin-top: 80px; }
+    .footer-wrap { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+    .footer-logo { font-family: 'Barlow Condensed', sans-serif; font-size: 26px; font-weight: 800; color: var(--text); margin-bottom: 12px; }
+    .footer-logo span { color: var(--orange); }
+    .footer-desc { font-size: 13px; color: var(--muted); line-height: 1.7; }
+    .footer-col h4 { font-size: 11px; font-weight: 700; color: var(--text); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 16px; }
+    .footer-col a { display: block; font-size: 13px; color: var(--muted); text-decoration: none; margin-bottom: 10px; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--text); }
+    .footer-bottom { border-top: 1px solid var(--border); padding-top: 20px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; }
+    .footer-bottom p { font-size: 11px; color: var(--muted); }
+    .footer-bottom a { font-size: 11px; color: var(--muted); text-decoration: none; }
+    .footer-disclosure { font-size: 11px; color: #3A3A3A; line-height: 1.6; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); }
+    @media (max-width: 900px) {
+      nav { padding: 0 20px; height: 56px; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .wrap { padding: 0 20px; }
+      .footer-wrap { padding: 0 20px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .contact-card { padding: 24px; }
+    }
+    @media (max-width: 560px) {
+      .wrap { padding: 0 16px; }
+      .footer-wrap { padding: 0 16px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 20px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="closeMenu()">✕</button>
+  <a href="index.html" onclick="closeMenu()">Home</a>
+  <a href="electronics.html" onclick="closeMenu()">Electronics</a>
+  <a href="outdoor.html" onclick="closeMenu()">Outdoor Gear</a>
+  <a href="smart-home.html" onclick="closeMenu()">Smart Home</a>
+  <a href="blog.html" onclick="closeMenu()">Blog</a>
+</div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Gear<span>Grid</span></a>
+  <div class="nav-links">
+    <a href="electronics.html">Electronics</a>
+    <a href="outdoor.html">Outdoor Gear</a>
+    <a href="smart-home.html">Smart Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html" class="active">Contact</a>
+  </div>
+  <button class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="wrap">
+  <div class="page-hero">
+    <div class="page-tag">Contact</div>
+    <h1>Let's <span>Talk.</span></h1>
+    <p>Have a question, a product you'd like us to review, or want to work together? We read every email and aim to reply within 1–2 business days.</p>
+  </div>
+
+  <div class="contact-card">
+    <h2>Send Us a Message</h2>
+    <p>The best way to reach us is directly by email. Whether you're a reader with a question or a brand looking to connect, drop us a line.</p>
+    <a href="mailto:hello@geargridreviews.com" class="email-btn">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      Email Us Now
+    </a>
+    <span class="email-plain">Or copy: <a href="mailto:hello@geargridreviews.com">hello@geargridreviews.com</a></span>
+  </div>
+
+  <div class="topics">
+    <div class="topic">
+      <div class="topic-icon">❓</div>
+      <div>
+        <div class="topic-title">Reader Questions</div>
+        <div class="topic-desc">Can't find what you're looking for? Have a question about a product we reviewed? We're happy to help.</div>
+      </div>
+    </div>
+    <div class="topic">
+      <div class="topic-icon">📦</div>
+      <div>
+        <div class="topic-title">Product Suggestions</div>
+        <div class="topic-desc">Know of a piece of gear we should cover? Send us the details and we'll add it to our review pipeline.</div>
+      </div>
+    </div>
+    <div class="topic">
+      <div class="topic-icon">🤝</div>
+      <div>
+        <div class="topic-title">Brand Partnerships</div>
+        <div class="topic-desc">Interested in working with GearGrid? We're selective about partnerships — reach out and tell us about your brand.</div>
+      </div>
+    </div>
+    <div class="topic">
+      <div class="topic-icon">🐛</div>
+      <div>
+        <div class="topic-title">Site Issues</div>
+        <div class="topic-desc">Spotted a broken link, wrong price, or outdated info? Let us know and we'll fix it fast.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Gear<span>Grid</span></div>
+        <p class="footer-desc">Expert reviews on electronics and outdoor gear. We research, test, and recommend so you can buy with confidence.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Electronics</h4>
+        <a href="electronics.html">Headphones</a>
+        <a href="electronics.html">TVs</a>
+        <a href="electronics.html">Tablets</a>
+        <a href="electronics.html">Drones</a>
+        <a href="smart-home.html">Smart Home</a>
+      </div>
+      <div class="footer-col">
+        <h4>Outdoor Gear</h4>
+        <a href="outdoor.html">Camping</a>
+        <a href="outdoor.html">Grills & BBQ</a>
+        <a href="outdoor.html">GPS & Navigation</a>
+        <a href="outdoor.html">Backpacks</a>
+        <a href="outdoor.html">Coolers</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="how-we-review.html">How We Review</a>
+        <a href="contact.html">Contact</a>
+        <a href="#disclosure">Affiliate Disclosure</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </div>
+    </div>
+    <div id="disclosure" class="footer-disclosure">
+      <strong style="color:#444;">Affiliate Disclosure:</strong> GearGrid participates in the Amazon Associates affiliate program. When you click our links and make a purchase, we may earn a small commission at no additional cost to you. Our editorial opinions are our own and are never influenced by affiliate partnerships.
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 GearGrid. All rights reserved.</p>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+        <a href="#disclosure">Affiliate Disclosure</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburgerBtn.addEventListener('click', () => { mobileMenu.classList.toggle('open'); document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : ''; });
+  function closeMenu() { mobileMenu.classList.remove('open'); document.body.style.overflow = ''; }
+</script>
+</body>
+</html>

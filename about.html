@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About GearGrid — Expert Gear Reviews</title>
+  <meta name="description" content="GearGrid is an independent gear review site helping you find the best electronics and outdoor equipment at the best prices." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+    :root { --bg: #0A0A0A; --surface: #111111; --surface2: #181818; --border: #222222; --text: #F0F0EE; --muted: #666666; --orange: #FF5500; --cyan: #00D4FF; --green: #39D96B; }
+    body { background: var(--bg); font-family: 'Inter', sans-serif; color: var(--text); }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(10,10,10,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 48px; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .nav-logo { font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 800; letter-spacing: -0.01em; text-decoration: none; color: var(--text); display: flex; align-items: center; gap: 10px; }
+    .nav-logo span { color: var(--orange); }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a { font-size: 13px; font-weight: 500; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px; flex-direction: column; gap: 5px; }
+    .hamburger span { display: block; width: 20px; height: 2px; background: var(--text); border-radius: 2px; }
+    .mobile-menu { display: none; position: fixed; inset: 0; background: var(--bg); z-index: 200; flex-direction: column; padding: 80px 28px 40px; gap: 4px; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: 'Barlow Condensed', sans-serif; font-size: 44px; font-weight: 700; color: var(--text); text-decoration: none; border-bottom: 1px solid var(--border); padding: 12px 0; letter-spacing: -0.01em; }
+    .mobile-close { position: absolute; top: 18px; right: 20px; background: none; border: none; color: var(--muted); font-size: 28px; cursor: pointer; }
+    .wrap { max-width: 800px; margin: 0 auto; padding: 0 48px; }
+    .page-hero { padding: 72px 0 56px; border-bottom: 1px solid var(--border); }
+    .page-tag { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,85,0,0.08); border: 1px solid rgba(255,85,0,0.25); border-radius: 100px; padding: 4px 12px; font-size: 11px; font-weight: 700; color: var(--orange); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px; }
+    .page-hero h1 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(44px, 6vw, 64px); font-weight: 800; line-height: 0.95; letter-spacing: -0.02em; margin-bottom: 16px; }
+    .page-hero h1 span { color: var(--orange); }
+    .page-hero p { font-size: 16px; color: #777; line-height: 1.7; max-width: 600px; }
+    .content { padding: 56px 0; }
+    .content h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 800; margin-bottom: 14px; margin-top: 40px; }
+    .content h2:first-child { margin-top: 0; }
+    .content p { font-size: 15px; color: #888; line-height: 1.8; margin-bottom: 16px; }
+    .content p strong { color: var(--text); }
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 32px 0; }
+    .value-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 24px; }
+    .value-icon { font-size: 28px; margin-bottom: 12px; display: block; }
+    .value-title { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+    .value-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+    footer { background: var(--surface); border-top: 1px solid var(--border); padding: 48px 0 24px; margin-top: 0; }
+    .footer-wrap { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+    .footer-logo { font-family: 'Barlow Condensed', sans-serif; font-size: 26px; font-weight: 800; color: var(--text); margin-bottom: 12px; }
+    .footer-logo span { color: var(--orange); }
+    .footer-desc { font-size: 13px; color: var(--muted); line-height: 1.7; }
+    .footer-col h4 { font-size: 11px; font-weight: 700; color: var(--text); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 16px; }
+    .footer-col a { display: block; font-size: 13px; color: var(--muted); text-decoration: none; margin-bottom: 10px; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--text); }
+    .footer-bottom { border-top: 1px solid var(--border); padding-top: 20px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; }
+    .footer-bottom p { font-size: 11px; color: var(--muted); }
+    .footer-bottom a { font-size: 11px; color: var(--muted); text-decoration: none; }
+    .footer-disclosure { font-size: 11px; color: #3A3A3A; line-height: 1.6; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); }
+    @media (max-width: 900px) {
+      nav { padding: 0 20px; height: 56px; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .wrap { padding: 0 20px; }
+      .footer-wrap { padding: 0 20px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .values-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .wrap { padding: 0 16px; }
+      .footer-wrap { padding: 0 16px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 20px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="closeMenu()">✕</button>
+  <a href="index.html" onclick="closeMenu()">Home</a>
+  <a href="electronics.html" onclick="closeMenu()">Electronics</a>
+  <a href="outdoor.html" onclick="closeMenu()">Outdoor Gear</a>
+  <a href="smart-home.html" onclick="closeMenu()">Smart Home</a>
+  <a href="blog.html" onclick="closeMenu()">Blog</a>
+</div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Gear<span>Grid</span></a>
+  <div class="nav-links">
+    <a href="electronics.html">Electronics</a>
+    <a href="outdoor.html">Outdoor Gear</a>
+    <a href="smart-home.html">Smart Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <button class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="wrap">
+  <div class="page-hero">
+    <div class="page-tag">About Us</div>
+    <h1>We Help You Buy <span>Smarter.</span></h1>
+    <p>GearGrid is an independent review site dedicated to helping you find the best electronics and outdoor gear — without the noise, bias, or sponsored fluff.</p>
+  </div>
+
+  <div class="content">
+    <h2>Our Mission</h2>
+    <p>There's too much gear out there and not enough honest information about it. GearGrid exists to cut through the noise. We research, test, and compare products so you can make confident buying decisions without wasting hours on Reddit threads and YouTube videos.</p>
+    <p>We're not a massive media company. We're a focused team of gear enthusiasts who genuinely care about what we recommend. If we wouldn't buy it ourselves, it doesn't go on GearGrid.</p>
+
+    <div class="values-grid">
+      <div class="value-card">
+        <span class="value-icon">🔍</span>
+        <div class="value-title">Independent Research</div>
+        <div class="value-desc">Every recommendation is based on real research — specs, user reviews, expert opinions, and hands-on testing where possible.</div>
+      </div>
+      <div class="value-card">
+        <span class="value-icon">⚖️</span>
+        <div class="value-title">Honest Opinions</div>
+        <div class="value-desc">We call out flaws as clearly as we highlight strengths. Our affiliate relationships never influence our editorial scores.</div>
+      </div>
+      <div class="value-card">
+        <span class="value-icon">💰</span>
+        <div class="value-title">Best Value Focus</div>
+        <div class="value-desc">We cover products across every price range — from budget picks to premium options — and always flag when cheaper alternatives perform just as well.</div>
+      </div>
+    </div>
+
+    <h2>What We Cover</h2>
+    <p>GearGrid covers two main categories: <strong>Electronics</strong> (headphones, TVs, tablets, drones, smart home devices, and more) and <strong>Outdoor Gear</strong> (camping equipment, GPS devices, grills, coolers, backpacks, and more). We also cover the overlap — gear that lives at the intersection of tech and the outdoors.</p>
+
+    <h2>How We Make Money</h2>
+    <p>GearGrid is reader-supported. When you click a link on our site and make a purchase on Amazon or another retailer, we may earn a small affiliate commission at no extra cost to you. This is how we keep the lights on and the site free to use.</p>
+    <p>Our affiliate relationships <strong>never influence our editorial recommendations</strong>. We recommend the best products regardless of commission rate. You can read more in our <a href="privacy-policy.html" style="color:var(--orange);text-decoration:none;">Privacy Policy</a> and <a href="#disclosure" style="color:var(--orange);text-decoration:none;">Affiliate Disclosure</a>.</p>
+
+    <h2>Get in Touch</h2>
+    <p>Have a question, product suggestion, or want to work with us? Reach out at <a href="mailto:hello@geargridreviews.com" style="color:var(--orange);text-decoration:none;">hello@geargridreviews.com</a> — we read every email.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Gear<span>Grid</span></div>
+        <p class="footer-desc">Expert reviews on electronics and outdoor gear. We research, test, and recommend so you can buy with confidence.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Electronics</h4>
+        <a href="electronics.html">Headphones</a>
+        <a href="electronics.html">TVs</a>
+        <a href="electronics.html">Tablets</a>
+        <a href="electronics.html">Drones</a>
+        <a href="smart-home.html">Smart Home</a>
+      </div>
+      <div class="footer-col">
+        <h4>Outdoor Gear</h4>
+        <a href="outdoor.html">Camping</a>
+        <a href="outdoor.html">Grills & BBQ</a>
+        <a href="outdoor.html">GPS & Navigation</a>
+        <a href="outdoor.html">Backpacks</a>
+        <a href="outdoor.html">Coolers</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="how-we-review.html">How We Review</a>
+        <a href="contact.html">Contact</a>
+        <a href="#disclosure">Affiliate Disclosure</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </div>
+    </div>
+    <div id="disclosure" class="footer-disclosure">
+      <strong style="color:#444;">Affiliate Disclosure:</strong> GearGrid participates in the Amazon Associates affiliate program. When you click our links and make a purchase, we may earn a small commission at no additional cost to you. Our editorial opinions are our own and are never influenced by affiliate partnerships.
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 GearGrid. All rights reserved.</p>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+        <a href="#disclosure">Affiliate Disclosure</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburgerBtn.addEventListener('click', () => { mobileMenu.classList.toggle('open'); document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : ''; });
+  function closeMenu() { mobileMenu.classList.remove('open'); document.body.style.overflow = ''; }
+</script>
+</body>
+</html>
