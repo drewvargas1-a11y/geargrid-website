@@ -140,6 +140,26 @@
     .post-cat.outdoor { color: var(--green); }
     .post-cat.general { color: var(--orange); }
     .post-cat.smarthome { color: #A855F7; }
+
+    /* FEATURED PICKS */
+    .featured-section { padding: 56px 48px 0; max-width: 1240px; margin: 0 auto; }
+    .featured-section-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 28px; }
+    .featured-section-head h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 700; letter-spacing: -0.02em; color: var(--text); }
+    .featured-section-head span { font-size: 12px; color: var(--muted); }
+    .featured-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 56px; padding-bottom: 56px; border-bottom: 1px solid var(--border); }
+    .featured-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 14px; transition: border-color 0.2s ease; }
+    .featured-card:hover { border-color: rgba(255,85,0,0.4); }
+    .featured-card-top { display: flex; align-items: flex-start; gap: 14px; }
+    .featured-card-img { width: 72px; height: 72px; object-fit: contain; border-radius: 8px; background: var(--surface2); flex-shrink: 0; }
+    .featured-card-meta { flex: 1; }
+    .featured-card-label { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 4px; }
+    .featured-card-name { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 700; color: var(--text); line-height: 1.2; margin-bottom: 4px; }
+    .featured-card-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+    .featured-card-foot { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+    .featured-card-price { font-size: 15px; font-weight: 600; color: var(--text); }
+    .featured-card-btn { display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: var(--orange); color: white; border-radius: 7px; font-size: 12px; font-weight: 600; text-decoration: none; transition: opacity 0.15s ease; white-space: nowrap; }
+    .featured-card-btn:hover { opacity: 0.85; }
+    @media (max-width: 900px) { .featured-section { padding: 40px 20px 0; } .featured-grid { grid-template-columns: 1fr; } }
     .post-title {
       font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 700;
       line-height: 1.2; color: var(--text); margin-bottom: 10px; letter-spacing: -0.01em;
@@ -233,6 +253,62 @@
   <p class="blog-hero-label">✍ GearGrid Blog</p>
   <h1 class="blog-hero-title">Buying Guides &<br>Gear Reviews</h1>
   <p class="blog-hero-desc">In-depth comparisons, hands-on reviews, and expert buying guides. We do the research so you buy right the first time.</p>
+</div>
+
+<!-- FEATURED PICKS -->
+<div class="featured-section">
+  <div class="featured-section-head">
+    <h2>Staff Top Picks Right Now</h2>
+    <span>Affiliate links — we earn a small commission at no cost to you</span>
+  </div>
+  <div class="featured-grid">
+
+    <div class="featured-card">
+      <div class="featured-card-top">
+        <img class="featured-card-img" src="https://m.media-amazon.com/images/I/61s3lPMO2hL._AC_SL1500_.jpg" alt="Sony WH-1000XM5 Headphones" />
+        <div class="featured-card-meta">
+          <p class="featured-card-label">★ Best ANC Headphones</p>
+          <p class="featured-card-name">Sony WH-1000XM5</p>
+          <p class="featured-card-desc">Industry-leading noise cancellation · 30hr battery · Multipoint Bluetooth</p>
+        </div>
+      </div>
+      <div class="featured-card-foot">
+        <span class="featured-card-price">~$279</span>
+        <a href="https://www.amazon.com/s?k=Sony+WH-1000XM5+headphones&tag=geargridrevie-20" class="featured-card-btn" target="_blank" rel="nofollow noopener">Buy on Amazon →</a>
+      </div>
+    </div>
+
+    <div class="featured-card">
+      <div class="featured-card-top">
+        <img class="featured-card-img" src="https://m.media-amazon.com/images/I/81s+W7B9q6L._AC_SL1500_.jpg" alt="Coleman Sundome 4-Person Tent" />
+        <div class="featured-card-meta">
+          <p class="featured-card-label">★ Best Beginner Tent</p>
+          <p class="featured-card-name">Coleman Sundome 4-Person</p>
+          <p class="featured-card-desc">10-min setup · WeatherTec seams · E-Port · 2 doors</p>
+        </div>
+      </div>
+      <div class="featured-card-foot">
+        <span class="featured-card-price">~$89</span>
+        <a href="https://www.amazon.com/s?k=Coleman+Sundome+4+Person+Tent&tag=geargridrevie-20" class="featured-card-btn" target="_blank" rel="nofollow noopener">Buy on Amazon →</a>
+      </div>
+    </div>
+
+    <div class="featured-card">
+      <div class="featured-card-top">
+        <img class="featured-card-img" src="https://us.amazfit.com/cdn/shop/files/Pamir_45_b21d2a6c-d7bf-4d0f-9cd8-99fdd5de9731.png?v=1742891101&width=400" alt="Amazfit Bip 6 Smartwatch" />
+        <div class="featured-card-meta">
+          <p class="featured-card-label">★ Best Budget Smartwatch</p>
+          <p class="featured-card-name">Amazfit Bip 6</p>
+          <p class="featured-card-desc">AMOLED · Built-in GPS · 10-day battery · 5 ATM water resistant</p>
+        </div>
+      </div>
+      <div class="featured-card-foot">
+        <span class="featured-card-price">~$79</span>
+        <a href="https://www.amazon.com/s?k=Amazfit+Bip+6+smartwatch&tag=geargridrevie-20" class="featured-card-btn" target="_blank" rel="nofollow noopener">Buy on Amazon →</a>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 <!-- POSTS -->
@@ -389,6 +465,63 @@
           <span>May 2026</span>
           <span class="post-meta-dot"></span>
           <span>7 min read</span>
+        </div>
+        <span class="post-read-more">Read Article →</span>
+      </div>
+    </a>
+
+    <a href="blog/best-laptop-under-700-2026.html" class="post-card">
+      <div class="post-card-img">
+        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?fm=jpg&q=70&w=800&auto=format&fit=crop" alt="Best Laptop Under $700 2026" loading="lazy" />
+        <div class="post-card-img-overlay"></div>
+        <span class="post-card-badge badge-electronics">Electronics</span>
+      </div>
+      <div class="post-card-body">
+        <p class="post-cat electronics">Laptops</p>
+        <div class="post-title">Best Laptop Under $700 in 2026: Top Picks Tested</div>
+        <p class="post-excerpt">The sub-$700 laptop market has quietly gotten excellent. OLED displays, Intel Core Ultra, and 13-hour battery — we tested six of the best to find the right pick at every budget.</p>
+        <div class="post-meta">
+          <span>May 2026</span>
+          <span class="post-meta-dot"></span>
+          <span>9 min read</span>
+        </div>
+        <span class="post-read-more">Read Article →</span>
+      </div>
+    </a>
+
+    <a href="blog/best-robot-vacuum-under-300-2026.html" class="post-card">
+      <div class="post-card-img">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?fm=jpg&q=70&w=800&auto=format&fit=crop" alt="Best Robot Vacuum Under $300 2026" loading="lazy" />
+        <div class="post-card-img-overlay"></div>
+        <span class="post-card-badge badge-smarthome">Smart Home</span>
+      </div>
+      <div class="post-card-body">
+        <p class="post-cat smarthome">Robot Vacuums</p>
+        <div class="post-title">Best Robot Vacuum Under $300 in 2026: Top 5 Ranked</div>
+        <p class="post-excerpt">Robot vacuums crossed a turning point — the sub-$300 options are genuinely good now. LiDAR mapping, strong suction, and auto-empty bases at prices that actually make sense.</p>
+        <div class="post-meta">
+          <span>May 2026</span>
+          <span class="post-meta-dot"></span>
+          <span>7 min read</span>
+        </div>
+        <span class="post-read-more">Read Article →</span>
+      </div>
+    </a>
+
+    <a href="blog/best-graduation-gifts-2026.html" class="post-card">
+      <div class="post-card-img">
+        <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?fm=jpg&q=70&w=800&auto=format&fit=crop" alt="Best Graduation Gifts 2026" loading="lazy" />
+        <div class="post-card-img-overlay"></div>
+        <span class="post-card-badge badge-electronics">Gift Guide</span>
+      </div>
+      <div class="post-card-body">
+        <p class="post-cat general">Gift Guide</p>
+        <div class="post-title">Best Graduation Gifts 2026: Tech Picks They'll Actually Use</div>
+        <p class="post-excerpt">Skip the picture frames and gift cards. These are the tech and gear gifts graduates actually want — AirPods, Kindle, power banks, and more at every budget.</p>
+        <div class="post-meta">
+          <span>May 2026</span>
+          <span class="post-meta-dot"></span>
+          <span>6 min read</span>
         </div>
         <span class="post-read-more">Read Article →</span>
       </div>
