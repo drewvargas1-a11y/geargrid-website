@@ -87,7 +87,7 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
     :root {
       --bg: #0A0A0A; --surface: #111111; --surface2: #181818;
-      --border: #222222; --text: #F0F0EE; --muted: #666666;
+      --border: #222222; --text: #F0F0EE; --muted: #888888;
       --orange: #FF5500; --cyan: #00D4FF; --green: #39D96B;
     }
     body { background: var(--bg); font-family: 'Inter', sans-serif; color: var(--text); }
@@ -169,6 +169,15 @@
       .product-rec { flex-direction: column; } .related-grid { grid-template-columns: 1fr; }
       .disclosure { padding: 10px 20px; } footer { padding: 40px 20px 24px; }
       .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+    }
+
+    @media (max-width: 480px) {
+      .related-grid { grid-template-columns: 1fr !important; }
+      .product-rec { flex-direction: column; }
+      .product-rec-foot { flex-direction: column; align-items: stretch; gap: 10px; }
+      .btn-amazon, .product-rec-btn { width: 100%; justify-content: center; padding: 11px 18px; min-height: 44px; }
+      .article-title, h1 { word-break: break-word; hyphens: auto; }
+      .breadcrumb { flex-wrap: wrap; line-height: 1.8; }
     }
   </style>
 <script type="application/ld+json">
