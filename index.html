@@ -587,6 +587,76 @@
       /* DISCLOSURE */
       .disclosure { font-size: 10px; }
     }
+
+    /* ── BACK TO SCHOOL ── */
+    .bts-section { background: linear-gradient(135deg, rgba(255,85,0,0.03) 0%, transparent 60%), var(--bg); }
+    .bts-banner {
+      background: linear-gradient(90deg, rgba(255,85,0,0.1), rgba(255,85,0,0.03));
+      border: 1px solid rgba(255,85,0,0.2); border-radius: 10px;
+      padding: 18px 24px; display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 28px; flex-wrap: wrap; gap: 12px;
+    }
+    .bts-banner-left { display: flex; align-items: center; gap: 14px; }
+    .bts-banner-emoji { font-size: 34px; line-height: 1; }
+    .bts-banner-text h3 {
+      font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 800;
+      color: var(--orange); letter-spacing: -0.01em;
+    }
+    .bts-banner-text p { font-size: 13px; color: var(--muted); margin-top: 2px; }
+    .bts-more-cta {
+      font-size: 12px; font-weight: 700; color: var(--orange); text-decoration: none;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      border: 1px solid rgba(255,85,0,0.3); padding: 8px 16px; border-radius: 5px;
+      transition: background 0.2s; white-space: nowrap;
+    }
+    .bts-more-cta:hover { background: rgba(255,85,0,0.1); }
+    .bts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .bts-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+      overflow: hidden; display: flex; flex-direction: column;
+      transition: border-color 0.2s, transform 0.2s; text-decoration: none;
+    }
+    .bts-card:hover { border-color: rgba(255,85,0,0.4); transform: translateY(-2px); }
+    .bts-card-img {
+      aspect-ratio: 1; overflow: hidden; background: #181818;
+      display: flex; align-items: center; justify-content: center; position: relative;
+    }
+    .bts-card-img img { width: 72%; height: 72%; object-fit: contain; transition: transform 0.3s ease; }
+    .bts-card:hover .bts-card-img img { transform: scale(1.07); }
+    .bts-card-badge {
+      position: absolute; top: 8px; left: 8px;
+      font-size: 9px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase;
+      padding: 3px 7px; border-radius: 4px; background: var(--orange); color: #fff;
+    }
+    .bts-card-body { padding: 14px 16px 16px; display: flex; flex-direction: column; flex: 1; }
+    .bts-card-cat { font-size: 9px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 5px; }
+    .bts-card-name { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; margin-bottom: auto; padding-bottom: 12px; }
+    .bts-card-footer { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
+    .bts-price { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700; color: var(--text); }
+    .bts-btn {
+      display: inline-flex; align-items: center; gap: 4px;
+      background: var(--orange); color: #fff; padding: 7px 12px; border-radius: 5px;
+      font-size: 11px; font-weight: 600; text-decoration: none;
+      transition: background 0.2s, transform 0.15s; white-space: nowrap;
+    }
+    .bts-btn:hover { background: #E04A00; transform: scale(1.03); }
+    .bts-chips { margin-top: 20px; display: flex; gap: 8px; flex-wrap: wrap; }
+    .bts-chip {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: var(--surface); border: 1px solid var(--border); border-radius: 100px;
+      padding: 6px 14px; font-size: 12px; color: var(--muted); text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .bts-chip:hover { border-color: var(--orange); color: var(--text); }
+    @media (max-width: 768px) {
+      .bts-grid { grid-template-columns: 1fr 1fr; }
+      .bts-banner { padding: 14px 16px; }
+    }
+    @media (max-width: 480px) {
+      .bts-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .bts-chips { gap: 6px; }
+    }
+
   </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7364642806341400"
      crossorigin="anonymous"></script>
@@ -740,6 +810,142 @@
         </div>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- BACK TO SCHOOL -->
+<section class="section bts-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="section-label" style="color:var(--orange);">🎒 Back to School 2026</p>
+        <h2 class="section-title">Top Student Picks</h2>
+      </div>
+      <a href="blog.html" class="view-all">All Guides →</a>
+    </div>
+
+    <div class="bts-banner">
+      <div class="bts-banner-left">
+        <div class="bts-banner-emoji">🎒</div>
+        <div class="bts-banner-text">
+          <h3>Back to School Sale Picks</h3>
+          <p>Art supplies, tech, dorm essentials, and study gear — curated for students.</p>
+        </div>
+      </div>
+      <a href="blog.html" class="bts-more-cta">See All Guides →</a>
+    </div>
+
+    <div class="bts-grid">
+
+      <!-- Canson Drawing Paper (user pick) -->
+      <a class="bts-card" href="blog/best-art-supplies-for-students-2026.html">
+        <div class="bts-card-img">
+          <img src="https://m.media-amazon.com/images/P/B002NQ2K16.01.LZZZZZZZ.jpg" alt="Canson Heavyweight Drawing Paper" loading="lazy" />
+          <span class="bts-card-badge">Art Pick</span>
+        </div>
+        <div class="bts-card-body">
+          <p class="bts-card-cat">Art Supplies</p>
+          <p class="bts-card-name">Canson Heavyweight Drawing Paper 9×12</p>
+          <div class="bts-card-footer">
+            <span class="bts-price">From $9</span>
+            <a class="bts-btn" href="https://www.amazon.com/dp/B002NQ2K16?tag=geargridrevie-20" onclick="event.stopPropagation()">Shop ↗</a>
+          </div>
+        </div>
+      </a>
+
+      <!-- HP 67 Ink (user pick) -->
+      <a class="bts-card" href="https://www.amazon.com/dp/B08412HXK9?tag=geargridrevie-20" target="_blank" rel="noopener nofollow sponsored">
+        <div class="bts-card-img">
+          <img src="https://m.media-amazon.com/images/P/B08412HXK9.01.LZZZZZZZ.jpg" alt="HP 67 Black and Tri-Color Ink Cartridges" loading="lazy" />
+          <span class="bts-card-badge">Printer Pick</span>
+        </div>
+        <div class="bts-card-body">
+          <p class="bts-card-cat">Printer Supplies</p>
+          <p class="bts-card-name">HP 67 Black + Tri-Color Ink Cartridges 2-Pack</p>
+          <div class="bts-card-footer">
+            <span class="bts-price">From $28</span>
+            <span class="bts-btn">Shop ↗</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- TI-84 Plus CE -->
+      <a class="bts-card" href="blog/best-graphing-calculators-2026.html">
+        <div class="bts-card-img">
+          <img src="https://m.media-amazon.com/images/P/B01LRW956A.01.LZZZZZZZ.jpg" alt="Texas Instruments TI-84 Plus CE" loading="lazy" />
+          <span class="bts-card-badge">STEM Pick</span>
+        </div>
+        <div class="bts-card-body">
+          <p class="bts-card-cat">Calculators</p>
+          <p class="bts-card-name">TI-84 Plus CE Color Graphing Calculator</p>
+          <div class="bts-card-footer">
+            <span class="bts-price">From $99</span>
+            <a class="bts-btn" href="https://www.amazon.com/dp/B01LRW956A?tag=geargridrevie-20" onclick="event.stopPropagation()">Shop ↗</a>
+          </div>
+        </div>
+      </a>
+
+      <!-- JanSport Backpack -->
+      <a class="bts-card" href="blog/best-college-backpacks-2026.html">
+        <div class="bts-card-img">
+          <img src="https://m.media-amazon.com/images/P/B01LGUYQC7.01.LZZZZZZZ.jpg" alt="JanSport Right Pack Backpack" loading="lazy" />
+          <span class="bts-card-badge">Top Backpack</span>
+        </div>
+        <div class="bts-card-body">
+          <p class="bts-card-cat">Backpacks</p>
+          <p class="bts-card-name">JanSport Right Pack 31L College Backpack</p>
+          <div class="bts-card-footer">
+            <span class="bts-price">From $64</span>
+            <a class="bts-btn" href="https://www.amazon.com/dp/B01LGUYQC7?tag=geargridrevie-20" onclick="event.stopPropagation()">Shop ↗</a>
+          </div>
+        </div>
+      </a>
+
+      <!-- Mini Fridge -->
+      <a class="bts-card" href="blog/best-mini-fridges-2026.html">
+        <div class="bts-card-img">
+          <img src="https://m.media-amazon.com/images/P/B09NV5Q74P.01.LZZZZZZZ.jpg" alt="BLACK+DECKER Mini Fridge" loading="lazy" />
+          <span class="bts-card-badge">Dorm Pick</span>
+        </div>
+        <div class="bts-card-body">
+          <p class="bts-card-cat">Dorm Essentials</p>
+          <p class="bts-card-name">BLACK+DECKER 2.5 Cu Ft Compact Mini Fridge</p>
+          <div class="bts-card-footer">
+            <span class="bts-price">From $99</span>
+            <a class="bts-btn" href="https://www.amazon.com/dp/B09NV5Q74P?tag=geargridrevie-20" onclick="event.stopPropagation()">Shop ↗</a>
+          </div>
+        </div>
+      </a>
+
+      <!-- Study Lamp -->
+      <a class="bts-card" href="blog/best-led-study-lamps-2026.html">
+        <div class="bts-card-img">
+          <img src="https://m.media-amazon.com/images/P/B01GNNL7TS.01.LZZZZZZZ.jpg" alt="TaoTronics LED Desk Lamp" loading="lazy" />
+          <span class="bts-card-badge">Study Pick</span>
+        </div>
+        <div class="bts-card-body">
+          <p class="bts-card-cat">Study Lamps</p>
+          <p class="bts-card-name">TaoTronics Eye-Caring LED Study Desk Lamp</p>
+          <div class="bts-card-footer">
+            <span class="bts-price">From $28</span>
+            <a class="bts-btn" href="https://www.amazon.com/dp/B01GNNL7TS?tag=geargridrevie-20" onclick="event.stopPropagation()">Shop ↗</a>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Quick-guide chips -->
+    <div class="bts-chips">
+      <a class="bts-chip" href="blog/best-dorm-room-essentials-2026.html">📦 Dorm Essentials</a>
+      <a class="bts-chip" href="blog/best-student-planners-2026.html">📅 Student Planners</a>
+      <a class="bts-chip" href="blog/best-notebooks-for-college-2026.html">📓 College Notebooks</a>
+      <a class="bts-chip" href="blog/best-whiteboards-2026.html">⬜ Whiteboards</a>
+      <a class="bts-chip" href="blog/best-dorm-decor-2026.html">✨ Dorm Decor</a>
+      <a class="bts-chip" href="blog/best-laptop-bags-2026.html">💼 Laptop Bags</a>
+      <a class="bts-chip" href="blog/best-lunch-boxes-for-school-2026.html">🥪 Lunch Boxes</a>
+      <a class="bts-chip" href="blog/best-binders-2026.html">📂 Binders</a>
+      <a class="bts-chip" href="blog/best-pencil-cases-2026.html">✏️ Pencil Cases</a>
     </div>
   </div>
 </section>
