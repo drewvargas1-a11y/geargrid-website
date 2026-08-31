@@ -9,6 +9,8 @@
     gtag('js', new Date());
     gtag('config', 'G-0DMFTFT8D3');
   </script>
+  <link rel="dns-prefetch" href="//www.amazon.com" />
+  <link rel="dns-prefetch" href="//m.media-amazon.com" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="canonical" href="https://geargridreviews.com/" />
@@ -28,28 +30,39 @@
   <meta name="twitter:image" content="https://images.pexels.com/photos/7772548/pexels-photo-7772548.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" />
 
   <script type="application/ld+json">
-  [
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "GearGrid",
-      "url": "https://geargridreviews.com",
-      "description": "Expert reviews and top picks for electronics and outdoor gear.",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://geargridreviews.com/?s={search_term_string}",
-        "query-input": "required name=search_term_string"
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://geargridreviews.com/#organization",
+        "name": "GearGrid Reviews",
+        "url": "https://geargridreviews.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://geargridreviews.com/logo-square.svg",
+          "width": 200,
+          "height": 200
+        },
+        "description": "Independent gear reviews and buying guides for electronics, outdoor gear, auto, and smart home products."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://geargridreviews.com/#website",
+        "url": "https://geargridreviews.com",
+        "name": "GearGrid Reviews",
+        "publisher": { "@id": "https://geargridreviews.com/#organization" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://geargridreviews.com/search.html?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
       }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "GearGrid",
-      "url": "https://geargridreviews.com",
-      "logo": "https://geargridreviews.com/favicon.ico",
-      "sameAs": []
-    }
-  ]
+    ]
+  }
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
