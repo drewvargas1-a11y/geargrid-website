@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0DMFTFT8D3"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-0DMFTFT8D3');</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search Gear Reviews & Buying Guides | GearGrid</title>
+  <meta name="description" content="Search 360+ expert buying guides and gear reviews on GearGrid. Find the best electronics, outdoor gear, auto parts, kitchen appliances, and more." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://geargridreviews.com/search.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased}
+    :root{
+      --bg:#0A0A0A;--surface:#111111;--surface2:#181818;--border:#222222;
+      --text:#F0F0EE;--muted:#666666;--orange:#FF5500;--cyan:#00D4FF;
+    }
+    body{background:var(--bg);font-family:'Inter',sans-serif;color:var(--text);min-height:100vh}
+
+    /* ── NAV ── */
+    nav{position:sticky;top:0;z-index:100;background:rgba(10,10,10,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 48px;display:flex;align-items:center;justify-content:space-between;height:68px}
+    .nav-logo{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:800;letter-spacing:-0.01em;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:10px}
+    .nav-logo span{color:var(--orange)}
+    .nav-links{display:flex;align-items:center;gap:32px}
+    .nav-links a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;transition:color 0.2s}
+    .nav-links a:hover{color:var(--text)}
+    .hamburger{display:none;background:none;border:none;cursor:pointer;padding:6px;flex-direction:column;gap:5px}
+    .hamburger span{display:block;width:20px;height:2px;background:var(--text);border-radius:2px}
+    @media(max-width:900px){nav{padding:0 20px;height:56px}.nav-links{display:none}.hamburger{display:flex}}
+
+    /* ── HERO SEARCH ── */
+    .search-hero{padding:64px 48px 48px;border-bottom:1px solid var(--border);background:var(--bg);position:relative;overflow:hidden}
+    .search-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 80%,rgba(255,85,0,0.1) 0%,transparent 55%),radial-gradient(ellipse at 80% 20%,rgba(0,212,255,0.07) 0%,transparent 50%);pointer-events:none}
+    .search-hero-inner{max-width:720px;margin:0 auto;position:relative;z-index:1;text-align:center}
+    .search-eyebrow{font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--orange);margin-bottom:16px}
+    .search-hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(36px,5vw,60px);font-weight:800;line-height:1;letter-spacing:-0.02em;margin-bottom:32px}
+    .search-hero h1 span{color:var(--orange)}
+
+    .search-box{display:flex;align-items:center;gap:0;background:var(--surface);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:6px 6px 6px 20px;box-shadow:0 0 0 1px rgba(255,255,255,0.04),0 0 32px rgba(255,85,0,0.12);transition:border-color 0.2s,box-shadow 0.2s}
+    .search-box:focus-within{border-color:rgba(255,85,0,0.5);box-shadow:0 0 0 3px rgba(255,85,0,0.1),0 0 40px rgba(255,85,0,0.18)}
+    .search-box svg{flex-shrink:0;opacity:0.5}
+    #searchInput{flex:1;background:none;border:none;outline:none;color:var(--text);font-size:17px;font-family:'Inter',sans-serif;padding:8px 14px;min-width:0}
+    #searchInput::placeholder{color:var(--muted)}
+    .search-btn{background:var(--orange);border:none;color:#fff;font-weight:700;font-size:14px;padding:12px 22px;border-radius:7px;cursor:pointer;white-space:nowrap;transition:background 0.2s,box-shadow 0.2s;font-family:'Inter',sans-serif;flex-shrink:0}
+    .search-btn:hover{background:#E04A00;box-shadow:0 0 20px rgba(255,85,0,0.4)}
+    .search-count{margin-top:16px;font-size:13px;color:var(--muted);min-height:20px}
+
+    /* ── FILTERS ── */
+    .filters-bar{padding:20px 48px;border-bottom:1px solid var(--border);background:var(--surface);display:flex;align-items:center;gap:10px;flex-wrap:wrap;overflow-x:auto}
+    .filter-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 16px;border-radius:100px;border:1px solid var(--border);font-size:12px;font-weight:600;color:var(--muted);background:none;cursor:pointer;white-space:nowrap;transition:all 0.15s;font-family:'Inter',sans-serif}
+    .filter-btn:hover{border-color:#444;color:var(--text)}
+    .filter-btn.active{background:var(--orange);border-color:var(--orange);color:#fff;box-shadow:0 0 14px rgba(255,85,0,0.3)}
+    @media(max-width:900px){.filters-bar{padding:16px 20px}}
+
+    /* ── RESULTS ── */
+    .results-wrap{max-width:1200px;margin:0 auto;padding:40px 48px 80px}
+    @media(max-width:900px){.results-wrap{padding:24px 20px 60px}}
+
+    /* Empty / loading states */
+    .state-msg{text-align:center;padding:80px 20px;color:var(--muted)}
+    .state-msg .big{font-family:'Barlow Condensed',sans-serif;font-size:48px;font-weight:800;color:var(--surface2);margin-bottom:12px}
+    .state-msg p{font-size:14px;line-height:1.7}
+    .state-msg .tip{margin-top:24px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+    .tip-pill{background:var(--surface);border:1px solid var(--border);border-radius:100px;padding:6px 14px;font-size:12px;color:var(--muted);cursor:pointer;transition:all 0.15s}
+    .tip-pill:hover{border-color:var(--orange);color:var(--text)}
+
+    /* Results grid */
+    .results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    @media(max-width:960px){.results-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:560px){.results-grid{grid-template-columns:1fr}}
+
+    /* Result card */
+    .result-card{background:var(--surface);border:1px solid rgba(255,255,255,0.45);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;transition:border-color 0.2s,transform 0.2s,box-shadow 0.2s;box-shadow:0 0 15px rgba(255,255,255,0.18),0 0 40px rgba(255,255,255,0.08)}
+    .result-card:hover{border-color:rgba(255,255,255,0.65);transform:translateY(-3px);box-shadow:0 0 22px rgba(255,255,255,0.28),0 10px 40px rgba(0,0,0,0.5)}
+    .result-card-img{aspect-ratio:16/9;overflow:hidden;background:var(--surface2);position:relative}
+    .result-card-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;display:block}
+    .result-card:hover .result-card-img img{transform:scale(1.04)}
+    .result-card-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.5) 0%,transparent 60%)}
+    .result-cat-badge{position:absolute;top:10px;left:10px;font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:3px 9px;border-radius:4px;background:rgba(0,0,0,0.7);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.15);color:#fff}
+    .result-card-body{padding:16px;display:flex;flex-direction:column;flex:1}
+    .result-meta{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+    .result-cat{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--orange)}
+    .result-type{font-size:10px;color:var(--muted);letter-spacing:0.06em;text-transform:uppercase}
+    .result-title{font-family:'Barlow Condensed',sans-serif;font-size:19px;font-weight:700;color:var(--text);line-height:1.2;margin-bottom:8px}
+    .result-desc{font-size:12px;color:var(--muted);line-height:1.6;flex:1;margin-bottom:14px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+    .result-read{font-size:12px;font-weight:600;color:var(--orange);letter-spacing:0.04em}
+
+    /* Highlight matched text */
+    mark{background:rgba(255,85,0,0.25);color:var(--text);border-radius:2px;padding:0 2px}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#FF5500" stroke-width="1.5"><path d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z"/><path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
+    Gear<span>Grid</span>
+  </a>
+  <div class="nav-links">
+    <a href="electronics.html">Electronics</a>
+    <a href="outdoor.html">Outdoor Gear</a>
+    <a href="smart-home.html">Smart Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="index.html#top-picks">Top Picks</a>
+    <a href="index.html#deals">Deals</a>
+  </div>
+  <button class="hamburger" onclick="window.location='index.html'">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO SEARCH -->
+<div class="search-hero">
+  <div class="search-hero-inner">
+    <p class="search-eyebrow">🔍 Search GearGrid</p>
+    <h1>Find the Best <span>Gear Reviews</span><br>& Buying Guides</h1>
+    <div class="search-box">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input id="searchInput" type="search" placeholder="Search headphones, tents, motor oil…" autocomplete="off" autocorrect="off" spellcheck="false" />
+      <button class="search-btn" onclick="doSearch()">Search</button>
+    </div>
+    <p class="search-count" id="searchCount">360+ expert buying guides across all categories</p>
+  </div>
+</div>
+
+<!-- CATEGORY FILTERS -->
+<div class="filters-bar">
+  <button class="filter-btn active" data-cat="All" onclick="setFilter(this)">All</button>
+  <button class="filter-btn" data-cat="Electronics" onclick="setFilter(this)">⚡ Electronics</button>
+  <button class="filter-btn" data-cat="Outdoor" onclick="setFilter(this)">🏕 Outdoor</button>
+  <button class="filter-btn" data-cat="Auto" onclick="setFilter(this)">🚗 Auto</button>
+  <button class="filter-btn" data-cat="Kitchen" onclick="setFilter(this)">🍳 Kitchen</button>
+  <button class="filter-btn" data-cat="Home" onclick="setFilter(this)">🏠 Home</button>
+  <button class="filter-btn" data-cat="Fitness" onclick="setFilter(this)">💪 Fitness</button>
+  <button class="filter-btn" data-cat="Smart Home" onclick="setFilter(this)">💡 Smart Home</button>
+  <button class="filter-btn" data-cat="Beauty & Grooming" onclick="setFilter(this)">✨ Beauty</button>
+  <button class="filter-btn" data-cat="Back to School" onclick="setFilter(this)">🎒 School</button>
+  <button class="filter-btn" data-cat="Pet Care" onclick="setFilter(this)">🐾 Pets</button>
+</div>
+
+<!-- RESULTS -->
+<div class="results-wrap">
+  <div id="resultsContainer">
+    <!-- populated by JS -->
+    <div class="state-msg" id="emptyState">
+      <div class="big">360+</div>
+      <p>Expert buying guides across electronics, outdoor gear,<br>auto parts, kitchen, fitness, and more.</p>
+      <div class="tip">
+        <span class="tip-pill" onclick="quickSearch('best headphones')">Best headphones</span>
+        <span class="tip-pill" onclick="quickSearch('camping tent')">Camping tent</span>
+        <span class="tip-pill" onclick="quickSearch('jump starter')">Jump starter</span>
+        <span class="tip-pill" onclick="quickSearch('air fryer')">Air fryer</span>
+        <span class="tip-pill" onclick="quickSearch('running shoes')">Running shoes</span>
+        <span class="tip-pill" onclick="quickSearch('robot vacuum')">Robot vacuum</span>
+        <span class="tip-pill" onclick="quickSearch('drone')">Drone</span>
+        <span class="tip-pill" onclick="quickSearch('wiper blades')">Wiper blades</span>
+      </div>
+    </div>
+    <div class="results-grid" id="resultsGrid" style="display:none"></div>
+  </div>
+</div>
+
+<script>
+let INDEX = [];
+let activeFilter = 'All';
+const input = document.getElementById('searchInput');
+const grid  = document.getElementById('resultsGrid');
+const empty = document.getElementById('emptyState');
+const count = document.getElementById('searchCount');
+
+// ── Load index ──────────────────────────────────────────────────────────────
+fetch('/search-index.json')
+  .then(r => r.json())
+  .then(data => {
+    INDEX = data;
+    // Check URL param on load
+    const q = new URLSearchParams(location.search).get('q') || '';
+    if (q) {
+      input.value = q;
+      render(q);
+    }
+  })
+  .catch(() => {
+    count.textContent = 'Could not load search index.';
+  });
+
+// ── Search logic ─────────────────────────────────────────────────────────────
+function score(post, tokens) {
+  let s = 0;
+  const title = post.title.toLowerCase();
+  const desc  = (post.desc || '').toLowerCase();
+  const cat   = post.cat.toLowerCase();
+  for (const tok of tokens) {
+    if (title.includes(tok)) s += title === tok ? 100 : title.startsWith(tok) ? 60 : 40;
+    if (desc.includes(tok))  s += 15;
+    if (cat.includes(tok))   s += 10;
+  }
+  return s;
+}
+
+function highlight(text, tokens) {
+  if (!tokens.length) return text;
+  const escaped = tokens.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+  const re = new RegExp(`(${escaped.join('|')})`, 'gi');
+  return text.replace(re, '<mark>$1</mark>');
+}
+
+function render(query) {
+  const tokens = query.trim().toLowerCase().split(/\s+/).filter(t => t.length > 1);
+  if (!tokens.length && activeFilter === 'All') {
+    grid.style.display = 'none';
+    empty.style.display = 'block';
+    count.textContent = '360+ expert buying guides across all categories';
+    return;
+  }
+
+  let results = INDEX;
+
+  // Category filter
+  if (activeFilter !== 'All') {
+    results = results.filter(p => p.cat === activeFilter);
+  }
+
+  // Text filter + score
+  if (tokens.length) {
+    results = results
+      .map(p => ({ ...p, _score: score(p, tokens) }))
+      .filter(p => p._score > 0)
+      .sort((a, b) => b._score - a._score);
+  } else {
+    // category only — show all in that category
+    results = results.slice();
+  }
+
+  empty.style.display = 'none';
+  grid.style.display  = 'grid';
+
+  if (!results.length) {
+    grid.innerHTML = `<div class="state-msg" style="grid-column:1/-1"><div class="big">Hmm</div><p>No results for "<strong>${query}</strong>".<br>Try a broader term or browse a category above.</p></div>`;
+    count.textContent = 'No results found';
+    return;
+  }
+
+  count.textContent = `${results.length} result${results.length === 1 ? '' : 's'}${activeFilter !== 'All' ? ` in ${activeFilter}` : ''}`;
+
+  const fallback = 'https://images.pexels.com/photos/7772548/pexels-photo-7772548.jpeg?auto=compress&cs=tinysrgb&w=600&q=80';
+
+  grid.innerHTML = results.slice(0, 60).map(p => {
+    const img   = p.image || fallback;
+    const title = highlight(p.title, tokens);
+    const desc  = highlight(p.desc || '', tokens);
+    return `<a class="result-card" href="${p.url}">
+      <div class="result-card-img">
+        <img src="${img}" alt="${p.title}" loading="lazy" onerror="this.src='${fallback}'" />
+        <div class="result-card-img-overlay"></div>
+        <span class="result-cat-badge">${p.cat}</span>
+      </div>
+      <div class="result-card-body">
+        <div class="result-meta">
+          <span class="result-cat">${p.cat}</span>
+          <span class="result-type">Guide</span>
+        </div>
+        <div class="result-title">${title}</div>
+        <div class="result-desc">${desc}</div>
+        <span class="result-read">Read Guide →</span>
+      </div>
+    </a>`;
+  }).join('');
+}
+
+// ── Input handlers ────────────────────────────────────────────────────────────
+let debounceTimer;
+input.addEventListener('input', () => {
+  clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(() => render(input.value), 200);
+});
+input.addEventListener('keydown', e => {
+  if (e.key === 'Enter') { doSearch(); }
+});
+
+function doSearch() {
+  const q = input.value.trim();
+  if (q) history.replaceState(null, '', `?q=${encodeURIComponent(q)}`);
+  render(q);
+}
+
+function setFilter(btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  activeFilter = btn.dataset.cat;
+  render(input.value);
+}
+
+function quickSearch(term) {
+  input.value = term;
+  render(term);
+}
+</script>
+</body>
+</html>
