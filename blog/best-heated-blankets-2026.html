@@ -199,12 +199,18 @@
     <a href="/blog.html" class="active">Blog</a>
     <a href="/about.html">About</a>
   </div>
+  <a href="/search.html" aria-label="Search" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:8px;background:var(--surface2,#181818);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);text-decoration:none;flex-shrink:0;" id="nav-search-btn"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></a>
   <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.add('open')" aria-label="Open menu">
     <span></span><span></span><span></span>
   </button>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-close" onclick="document.getElementById('mobileMenu').classList.remove('open')" aria-label="Close menu">&#x2715;</button>
+        <form action="/search.html" method="get" role="search" class="mobile-search-form" style="display:flex;align-items:center;gap:8px;background:#1a1a1a;border:1px solid rgba(255,85,0,0.3);border-radius:10px;padding:10px 14px;margin:0 0 16px 0;box-shadow:0 0 12px rgba(255,85,0,0.1);">
+          <svg width="14" height="14" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2.2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="search" name="q" placeholder="Search gear, guides…" autocomplete="off" style="flex:1;background:none;border:none;outline:none;color:#fff;font-size:15px;font-family:inherit;" />
+          <button type="submit" style="background:#FF5500;border:none;color:#fff;font-weight:700;font-size:12px;padding:6px 13px;border-radius:7px;cursor:pointer;white-space:nowrap;">Go</button>
+        </form>
   <a href="/">Home</a>
   <a href="/electronics.html">Electronics</a>
   <a href="/smart-home.html">Smart Home</a>
