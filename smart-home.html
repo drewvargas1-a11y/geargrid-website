@@ -310,6 +310,19 @@
       .featured-title { font-size: 26px; }
       .filter-pill { font-size: 11px; padding: 6px 12px; }
     }
+  
+  
+    /* Buying guides hub */
+    .guide-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .guide-link { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 14px 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; text-decoration: none; color: var(--text); box-shadow: 0 1px 2px rgba(0,0,0,0.4), 0 6px 18px -10px rgba(255,85,0,0.12); transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1); }
+    .guide-link:hover { transform: translateY(-2px); border-color: #3a3a3a; }
+    .guide-link:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
+    .guide-link:active { transform: translateY(0) scale(0.99); }
+    .guide-link i { font-style: normal; color: var(--orange); opacity: 0.6; transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.2s; }
+    .guide-link:hover i { transform: translateX(3px); opacity: 1; }
+    .guide-link span { font-size: 14px; font-weight: 500; line-height: 1.35; }
+    @media (max-width: 900px) { .guide-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .guide-grid { grid-template-columns: 1fr; } }
   </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7364642806341400"
      crossorigin="anonymous"></script>
@@ -801,6 +814,47 @@
 </section>
 
 <!-- FOOTER -->
+<!-- BUYING GUIDES:START -->
+<section id="guides" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="section-label" style="color:var(--purple, #A855F7);">💡 Buying Guides</p>
+        <h2 class="section-title">All Smart Home Buying Guides</h2>
+      </div>
+      <a href="blog.html" class="view-all">Every Guide →</a>
+    </div>
+    <div class="guide-grid">
+      <a class="guide-link" href="/blog/alexa-vs-google-home-2026.html"><span>Alexa vs Google Home</span><i aria-hidden="true">→</i></a>
+      <a class="guide-link" href="/blog/best-air-purifiers-2026.html"><span>Best Air Purifiers</span><i aria-hidden="true">→</i></a>
+      <a class="guide-link" href="/blog/best-air-purifiers-for-allergies-2026.html"><span>Best Air Purifiers for Allergies</span><i aria-hidden="true">→</i></a>
+      <a class="guide-link" href="/blog/best-carbon-monoxide-detectors-2026.html"><span>Best Carbon Monoxide Detectors</span><i aria-hidden="true">→</i></a>
+      <a class="guide-link" href="/blog/best-motion-sensor-lights-2026.html"><span>Best Motion Sensor Lights</span><i aria-hidden="true">→</i></a>
+      <a class="guide-link" href="/blog/best-nanny-cams-2026.html"><span>Best Nanny Cams</span><i aria-hidden="true">→</i></a>
+      <a class="guide-link" href="/blog/best-robot-vacuum-under-300-2026.html"><span>Best Robot Vacuum Under $300</span><i aria-hidden="true">→</i></a>
+      <a class="guide-link" href="/blog/best-robot-vacuums-under-300-2026.html"><span>Best Robot Vacuums Under $300</span><i aria-hidden="true">→</i></a>
+      <a class="guide-link" href="/blog/best-smart-bulbs-2026.html"><span>Best Smart Bulbs</span><i aria-hidden="true">→</i></a>
+      <a class="guide-link" href="/blog/best-smart-displays-2026.html"><span>Best Smart Displays</span><i aria-hidden="true">→</i></a>
+      <a class="guide-link" href="/blog/best-door-locks-2026.html"><span>Best Smart Door Locks</span><i aria-hidden="true">→</i></a>
+      <a class="guide-link" href="/blog/best-smart-door-locks-2026.html"><span>Best Smart Door Locks</span><i aria-hidden="true">→</i></a>
+      <a class="guide-link" href="/blog/best-smart-locks-2026.html"><span>Best Smart Door Locks</span><i aria-hidden="true">→</i></a>
+      <a class="guide-link" href="/blog/best-smart-garage-door-openers-2026.html"><span>Best Smart Garage Door Openers</span><i aria-hidden="true">→</i></a>
+      <a class="guide-link" href="/blog/best-smart-home-security-systems-2026.html"><span>Best Smart Home Security Systems</span><i aria-hidden="true">→</i></a>
+      <a class="guide-link" href="/blog/best-smart-light-strips-2026.html"><span>Best Smart Light Strips</span><i aria-hidden="true">→</i></a>
+      <a class="guide-link" href="/blog/best-smart-lighting-2026.html"><span>Best Smart Lighting</span><i aria-hidden="true">→</i></a>
+      <a class="guide-link" href="/blog/best-smart-plant-sensors-2026.html"><span>Best Smart Plant Sensors</span><i aria-hidden="true">→</i></a>
+      <a class="guide-link" href="/blog/best-smart-plugs-2026.html"><span>Best Smart Plugs for Your Home</span><i aria-hidden="true">→</i></a>
+      <a class="guide-link" href="/blog/best-smart-smoke-detectors-2026.html"><span>Best Smart Smoke Detectors</span><i aria-hidden="true">→</i></a>
+      <a class="guide-link" href="/blog/best-smart-sprinkler-controllers-2026.html"><span>Best Smart Sprinkler Controllers</span><i aria-hidden="true">→</i></a>
+      <a class="guide-link" href="/blog/best-smart-switches-2026.html"><span>Best Smart Switches</span><i aria-hidden="true">→</i></a>
+      <a class="guide-link" href="/blog/best-smart-thermostats-2026.html"><span>Best Smart Thermostats</span><i aria-hidden="true">→</i></a>
+      <a class="guide-link" href="/blog/best-video-doorbells-2026.html"><span>Best Video Doorbells</span><i aria-hidden="true">→</i></a>
+      <a class="guide-link" href="/blog/best-whole-home-wifi-systems-2026.html"><span>Best Whole-Home WiFi Systems</span><i aria-hidden="true">→</i></a>
+    </div>
+  </div>
+</section>
+<!-- BUYING GUIDES:END -->
+
 <footer>
   <div class="wrap">
     <div class="footer-grid">
