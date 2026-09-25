@@ -122,7 +122,7 @@
     .product-rec { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--orange); border-radius: 10px; padding: 20px 24px; margin: 32px 0; display: flex; align-items: flex-start; gap: 20px; }
     .product-rec-img { width: 88px; height: 88px; object-fit: cover; flex-shrink: 0; border-radius: 8px; background: var(--surface2); }
     .product-rec-label { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 4px; }
-    .product-rec h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .product-rec h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700; color: var(--text); margin: 0 0 4px; letter-spacing: normal; }
     .product-rec p { font-size: 13px; color: var(--muted); line-height: 1.5; margin-bottom: 14px; }
     .product-rec-foot { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
     .product-rec-price { font-size: 16px; font-weight: 600; color: var(--text); }
@@ -153,7 +153,7 @@
     .footer-logo { font-family: 'Barlow Condensed', sans-serif; font-size: 32px; font-weight: 800; color: var(--text); margin-bottom: 12px; }
     .footer-logo span { color: var(--orange); }
     .footer-desc { font-size: 14px; color: var(--muted); line-height: 1.7; }
-    .footer-col h4 { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 16px; letter-spacing: 0.04em; text-transform: uppercase; }
+    .footer-col .footer-heading { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 16px; letter-spacing: 0.04em; text-transform: uppercase; }
     .footer-col a { display: block; font-size: 14px; color: var(--muted); text-decoration: none; margin-bottom: 10px; transition: color 0.15s ease; }
     .footer-col a:hover { color: var(--text); }
     .footer-disclosure { font-size: 12px; color: #444; line-height: 1.7; padding: 24px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 24px; max-width: 1240px; margin-left: auto; margin-right: auto; }
@@ -299,7 +299,7 @@
       <img class="product-rec-img" src="https://images.pexels.com/photos/9742608/pexels-photo-9742608.jpeg?auto=compress&cs=tinysrgb&w=88&q=80" alt="HyperX Cloud II Gaming Headset" />
       <div class="product-rec-body">
         <p class="product-rec-label">★ Best Overall</p>
-        <h4>HyperX Cloud II Gaming Headset</h4>
+        <h3>HyperX Cloud II Gaming Headset</h3>
         <p>53mm drivers · 7.1 virtual surround · Memory foam leatherette · Detachable mic · 300g · Multi-platform</p>
         <div class="product-rec-foot">
           <span class="product-rec-price">~$70</span>
@@ -314,7 +314,7 @@
       <img class="product-rec-img" src="https://images.pexels.com/photos/10670819/pexels-photo-10670819.jpeg?auto=compress&cs=tinysrgb&w=88&q=80" alt="SteelSeries Arctis Nova 1 Gaming Headset" />
       <div class="product-rec-body">
         <p class="product-rec-label">💰 Best Value</p>
-        <h4>SteelSeries Arctis Nova 1 Gaming Headset</h4>
+        <h3>SteelSeries Arctis Nova 1 Gaming Headset</h3>
         <p>Neodymium drivers · Ski-goggle band · ClearCast mic · 198g ultralight · 3.5mm universal · Multi-platform</p>
         <div class="product-rec-foot">
           <span class="product-rec-price">~$50</span>
@@ -329,7 +329,7 @@
       <img class="product-rec-img" src="https://images.pexels.com/photos/9742608/pexels-photo-9742608.jpeg?auto=compress&cs=tinysrgb&w=88&q=80" alt="Razer BlackShark V2 X Gaming Headset" />
       <div class="product-rec-body">
         <p class="product-rec-label">🎵 Best Sound</p>
-        <h4>Razer BlackShark V2 X Gaming Headset</h4>
+        <h3>Razer BlackShark V2 X Gaming Headset</h3>
         <p>TriForce 50mm titanium drivers · THX Spatial Audio · Cardioid mic · Passive isolation · 240g · PC/Console</p>
         <div class="product-rec-foot">
           <span class="product-rec-price">~$50</span>
@@ -344,7 +344,7 @@
       <img class="product-rec-img" src="https://images.pexels.com/photos/28993053/pexels-photo-28993053.jpeg?auto=compress&cs=tinysrgb&w=88&q=80" alt="Logitech G432 7.1 Surround Gaming Headset" />
       <div class="product-rec-body">
         <p class="product-rec-label">🌍 Best for Immersion</p>
-        <h4>Logitech G432 7.1 Surround Gaming Headset</h4>
+        <h3>Logitech G432 7.1 Surround Gaming Headset</h3>
         <p>DTS Headphone:X 2.0 · 50mm drivers · Flip-to-mute mic · USB + 3.5mm · 259g · Multi-platform</p>
         <div class="product-rec-foot">
           <span class="product-rec-price">~$50</span>
@@ -398,9 +398,9 @@
   <div style="max-width:1240px;margin:0 auto;">
     <div class="footer-grid">
       <div><div class="footer-logo">Gear<span>Grid</span></div><p class="footer-desc">Expert reviews on electronics and outdoor gear. We research, test, and recommend so you can buy with confidence.</p></div>
-      <div class="footer-col"><h4>Electronics</h4><a href="../electronics.html">Headphones</a><a href="../electronics.html">TVs</a><a href="../electronics.html">Tablets</a></div>
-      <div class="footer-col"><h4>Outdoor</h4><a href="../outdoor.html">Camping</a><a href="../outdoor.html">Hiking</a><a href="../outdoor.html">Grills</a></div>
-      <div class="footer-col"><h4>Company</h4><a href="../about.html">About Us</a><a href="../how-we-review.html">How We Review</a><a href="../contact.html">Contact</a><a href="../privacy-policy.html">Privacy Policy</a></div>
+      <div class="footer-col"><p class="footer-heading">Electronics</p><a href="../electronics.html">Headphones</a><a href="../electronics.html">TVs</a><a href="../electronics.html">Tablets</a></div>
+      <div class="footer-col"><p class="footer-heading">Outdoor</p><a href="../outdoor.html">Camping</a><a href="../outdoor.html">Hiking</a><a href="../outdoor.html">Grills</a></div>
+      <div class="footer-col"><p class="footer-heading">Company</p><a href="../about.html">About Us</a><a href="../how-we-review.html">How We Review</a><a href="../contact.html">Contact</a><a href="../privacy-policy.html">Privacy Policy</a></div>
     </div>
     <div class="footer-disclosure"><strong style="color:#444;">Affiliate Disclosure:</strong> GearGrid participates in the Amazon Associates affiliate program. When you click our links and make a purchase, we may earn a small commission at no additional cost to you. Our editorial opinions are our own and are never influenced by affiliate partnerships.</div>
     <div class="footer-bottom"><p>© 2026 GearGrid. All rights reserved.</p><div style="display:flex;gap:20px;"><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a></div></div>

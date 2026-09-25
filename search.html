@@ -6,11 +6,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Search Gear Reviews & Buying Guides | GearGrid</title>
-  <meta name="description" content="Search 360+ expert buying guides and gear reviews on GearGrid. Find the best electronics, outdoor gear, auto parts, kitchen appliances, and more." />
+  <meta name="description" content="Search 400+ expert buying guides and gear reviews on GearGrid. Find the best electronics, outdoor gear, auto parts, kitchen appliances, and more." />
+  <meta name="twitter:description" content="Search 400+ expert buying guides and gear reviews on GearGrid. Find the best electronics, outdoor gear, auto parts, kitchen appliances, and more." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://geargridreviews.com/search.html" />
   <meta property="og:title" content="Search Gear Reviews & Buying Guides | GearGrid" />
-  <meta property="og:description" content="Search 360+ expert buying guides on GearGrid. Find the best electronics, outdoor gear, auto parts, kitchen appliances, and more." />
+  <meta property="og:description" content="Search 400+ expert buying guides and gear reviews on GearGrid. Find the best electronics, outdoor gear, auto parts, kitchen appliances, and more." />
   <meta property="og:url" content="https://geargridreviews.com/search.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" />
@@ -19,7 +20,7 @@
   <meta name="twitter:title" content="Search Gear Reviews & Buying Guides | GearGrid" />
   <meta name="twitter:image" content="https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" />
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebPage","name":"Search Gear Reviews & Buying Guides","description":"Search 360+ expert buying guides on GearGrid. Find the best electronics, outdoor gear, auto parts, kitchen appliances, and more.","url":"https://geargridreviews.com/search.html","publisher":{"@type":"Organization","name":"GearGrid Reviews","url":"https://geargridreviews.com"}}
+  {"@context":"https://schema.org","@type":"WebPage","name":"Search Gear Reviews & Buying Guides","description":"Search 400+ expert buying guides on GearGrid. Find the best electronics, outdoor gear, auto parts, kitchen appliances, and more.","url":"https://geargridreviews.com/search.html","publisher":{"@type":"Organization","name":"GearGrid Reviews","url":"https://geargridreviews.com"}}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -134,7 +135,7 @@
       <input id="searchInput" type="search" placeholder="Search headphones, tents, motor oil…" autocomplete="off" autocorrect="off" spellcheck="false" />
       <button class="search-btn" onclick="doSearch()">Search</button>
     </div>
-    <p class="search-count" id="searchCount">360+ expert buying guides across all categories</p>
+    <p class="search-count" id="searchCount">400+ expert buying guides across all categories</p>
   </div>
 </div>
 
@@ -158,7 +159,7 @@
   <div id="resultsContainer">
     <!-- populated by JS -->
     <div class="state-msg" id="emptyState">
-      <div class="big">360+</div>
+      <div class="big">400+</div>
       <p>Expert buying guides across electronics, outdoor gear,<br>auto parts, kitchen, fitness, and more.</p>
       <div class="tip">
         <span class="tip-pill" onclick="quickSearch('best headphones')">Best headphones</span>
@@ -225,7 +226,7 @@ function render(query) {
   if (!tokens.length && activeFilter === 'All') {
     grid.style.display = 'none';
     empty.style.display = 'block';
-    count.textContent = '360+ expert buying guides across all categories';
+    count.textContent = '400+ expert buying guides across all categories';
     return;
   }
 
